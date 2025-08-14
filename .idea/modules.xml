@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Laboratorio-DOSW-02.iml" filepath="$PROJECT_DIR$/.idea/Laboratorio-DOSW-02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pareja7_Ramirez_Ariza/Laboratorio1.iml" filepath="$PROJECT_DIR$/Pareja7_Ramirez_Ariza/Laboratorio1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pareja7_Ramirez_Ariza/reto_1_ramirez_ariza/reto_1_ramirez_ariza.iml" filepath="$PROJECT_DIR$/Pareja7_Ramirez_Ariza/reto_1_ramirez_ariza/reto_1_ramirez_ariza.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pareja7_Ramirez_Ariza/reto_2_ramirez_ariza/reto_2_ramirez_ariza.iml" filepath="$PROJECT_DIR$/Pareja7_Ramirez_Ariza/reto_2_ramirez_ariza/reto_2_ramirez_ariza.iml" />
+    </modules>
+  </component>
+</project>
