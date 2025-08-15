@@ -15,6 +15,6 @@ public class Reto1{
         //Creacion mensaje
         Mensaje mensaje = new Mensaje(saludo);
         //Mostrar mensaje
-        System.out.println(mensaje.getMensaje);
+        System.out.println(mensaje.getMensaje());
     }
 }
