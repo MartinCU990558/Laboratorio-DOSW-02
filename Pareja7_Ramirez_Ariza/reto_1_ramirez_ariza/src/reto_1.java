@@ -41,10 +41,10 @@ public class reto_1 {
 
         }
         public void print_message(){
-           ArrayList<String> students_info = (ArrayList<String>) this.students.stream().map(n -> n.getName() +
-                    " de la escuela de " + n.getSemester() + " de " + n.getAge()+ " años").collect(Collectors.toList());
             System.out.println("¡Hola bienvenidos! Nosotros somos la pareja conformada por " +
-                    students_info.get(0) + " y " + students_info.get(1) + ", nuestros correos institucionales son "+
+                    this.students.stream().map(n -> n.getName() +
+                    " de la escuela de " + n.getSemester() + " semestre de " + n.getAge()+ " años").collect(Collectors.joining(" y ")) +
+                     ", nuestros correos institucionales son "+
                     students.stream().map(Student::getEmail).collect(Collectors.joining(" y ")));
         }
 
