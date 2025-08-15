@@ -36,15 +36,11 @@ public class reto_1 {
     public static class Greeting_message {
         private ArrayList<Student> students = new ArrayList<Student>();
 
-        public Greeting_message(ArrayList<Student> students) {
-            this.students = students;
-
-        }
-        public void print_message(){
+        public static void print_message(ArrayList<Student> students) {
             System.out.println("¡Hola bienvenidos! Nosotros somos la pareja conformada por " +
-                    this.students.stream().map(n -> n.getName() +
+                    students.stream().map(n -> n.getName() +
                     " de la escuela de " + n.getSemester() + " semestre de " + n.getAge()+ " años").collect(Collectors.joining(" y ")) +
-                     ", nuestros correos institucionales son "+
+                     ",\n nuestros correos institucionales son "+
                     students.stream().map(Student::getEmail).collect(Collectors.joining(" y ")));
         }
 
@@ -58,7 +54,6 @@ public class reto_1 {
         students.add(A);
         students.add(B);
 
-        Greeting_message messageHandler = new Greeting_message(students);
-        messageHandler.print_message();
+        Greeting_message.print_message(students);
     }
 }
