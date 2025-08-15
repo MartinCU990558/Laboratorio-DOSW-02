@@ -1,0 +1,64 @@
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+
+public class reto_1 {
+    public static class Student {
+        private String name;
+        private int age;
+        private String email;
+        private int semester;
+
+        public Student(String name, int age, String email, int semester) {
+            this.name = name;
+            this.age = age;
+            this.email = email;
+            this.semester = semester;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public int getAge() {
+            return age;
+        }
+
+        public String getEmail() {
+            return email;
+        }
+
+        public int getSemester() {
+            return semester;
+        }
+
+    }
+
+    public static class Greeting_message {
+        private ArrayList<Student> students = new ArrayList<Student>();
+
+        public Greeting_message(ArrayList<Student> students) {
+            this.students = students;
+
+        }
+        public void print_message(){
+           ArrayList<String> students_info = (ArrayList<String>) this.students.stream().map(n -> n.getName() +
+                    " de la escuela de " + n.getSemester() + " de " + n.getAge()+ " años").collect(Collectors.toList());
+            System.out.println("¡Hola bienvenidos! Nosotros somos la pareja conformada por " +
+                    students_info.get(0) + " y " + students_info.get(1) + ", nuestros correos institucionales son "+
+                    students.stream().map(Student::getEmail).collect(Collectors.joining(" y ")));
+        }
+
+    }
+
+    public static void main(String[] args){
+        ArrayList<Student> students = new ArrayList<>();
+        Student A = new Student("Sofia Ariza",19,"sofia@mail.com", 6);
+        Student B = new Student("Tomas Ramirez",19,"thomas@mail.com", 6);
+
+        students.add(A);
+        students.add(B);
+
+        Greeting_message messageHandler = new Greeting_message(students);
+        messageHandler.print_message();
+    }
+}
