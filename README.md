@@ -6,6 +6,7 @@
 
 **Nombre de la rama:** feature/QuinteroMaria_OrtegaJuan_2025-2
 
+
 ---
 
 ## Retos completados
