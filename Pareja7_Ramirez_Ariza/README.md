@@ -13,7 +13,8 @@
 ### Reto 1: Configuración y creación de rama
 ** Evidencia :**
 ! [Captura] (imagenes/reto1_config.png)
-Descripción breve de lo que hicieron.
+Hicimos un desarrollo de clases de las estudiantes y la clase que imprime el mensaje el cual es redactado logicamente
+atravez de mensajes y organizar la informacion para imprimirlo correctamente dando una solucion optima para la clase
 
 ### Reto 2: Commit colaborativo
 ** Evidencia :**
