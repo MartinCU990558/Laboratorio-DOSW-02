@@ -12,8 +12,8 @@
 
 ### Reto 1: Configuración y creación de rama
 ** Evidencia :**
-! [Captura] (imagenes/reto1_config.png)
-Descripción breve de lo que hicieron.
+![img.png](img.png)!
+
 
 ### Reto 2: Commit colaborativo
 ** Evidencia :**
