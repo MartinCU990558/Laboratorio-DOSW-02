@@ -22,4 +22,8 @@ Push
 Validación de la Estructura Creada
 ![alt text](img/5.png)
 
+CODIGO RETO 1
+![alt text](img/Codigo1.png)
+RESULTADO RETO 1
+![alt text](img/Resp1.png)
 ![][]
