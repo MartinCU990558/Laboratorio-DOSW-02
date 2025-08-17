@@ -5,11 +5,20 @@ import java.util.stream.Collectors;
 
 public class Mensaje {
     public static String generarBienvenida(List<Estudiante> estudiantes) {
-        return estudiantes.stream()
+        String descripciones = estudiantes.stream()
             .map(est -> String.format(
-                "¡Bienvenido %s! Edad: %d, Correo: %s, Semestre: %d",
-                est.getNombre(), est.getEdad(), est.getCorreo(), est.getSemestre()
+                "%s estudiante de la escuela de %d semestre de %d años",
+                est.getNombre(), est.getSemestre(), est.getEdad()
             ))
-            .collect(Collectors.joining("\n"));
+            .collect(Collectors.joining(" y "));
+
+        String correos = estudiantes.stream()
+            .map(Estudiante::getCorreo)
+            .collect(Collectors.joining(" y "));
+
+        return String.format(
+            "¡Hola Bienvenidos! Nosotros somos la pareja conformada por %s, nuestros correos institucionales son %s",
+            descripciones, correos
+        );
     }
 }
