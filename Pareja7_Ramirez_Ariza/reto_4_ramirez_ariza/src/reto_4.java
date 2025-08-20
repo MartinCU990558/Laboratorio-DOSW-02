@@ -23,15 +23,29 @@ public class reto_4 {
         }
         return result;
     }
+
+    public static Map<String, Integer> mergeMaps(Map<String, Integer> map1, Map<String, Integer> map2) {
+        Map<String, Integer> mergedMap = new HashMap<>();
+        mergedMap.putAll(map2);
+        mergedMap.putAll(map1);
+        return mergedMap;
+    }
+
     public static void main(String[] args) {
-        List<SimpleEntry<String, Integer>> input = List.of(
+        List<SimpleEntry<String, Integer>> input1 = List.of(
                 new SimpleEntry<>("A", 1),
                 new SimpleEntry<>("B", 2),
                 new SimpleEntry<>("A", 3),
                 new SimpleEntry<>("C", 4)
         );
-        ;
+        List<SimpleEntry<String, Integer>> input2 = List.of(
+                new SimpleEntry<>("A", 1),
+                new SimpleEntry<>("B", 2),
+                new SimpleEntry<>("F", 3),
+                new SimpleEntry<>("D", 4)
+        );
         System.out.println(storeUniqueKeysMap(input));
         System.out.println(storeUniqueKeysTable(input));
+        System.out.println(mergeMaps(storeUniqueKeysMap(input), storeUniqueKeysTable(input)));
     }
 }
