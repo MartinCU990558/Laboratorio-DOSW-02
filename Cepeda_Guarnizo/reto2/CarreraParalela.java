@@ -1,3 +1,6 @@
+
+package Cepeda_Guarnizo.reto2;
+
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -15,8 +18,10 @@ public class CarreraParalela{
                         .collect(Collectors.toList());
 
                 Function<List<Integer>, String> resultado = lista -> {
+                    int min = lista.stream().min(Integer::compareTo).get();
                     int max = lista.stream().max(Integer::compareTo).get();
-                    return  max +" " + lista.size();
+                 
+                    return "min" + min + " max"+ max+" cant" +lista.size();
                 };
 
                 System.out.println(resultado.apply(numeros));
