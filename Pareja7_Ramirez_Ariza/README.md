@@ -27,5 +27,8 @@ En la siguiente se puede apreciar como se evidencian los choques propuestos en e
 Despues de las rigurosas pruevas y creacion de una nueva clase solicitada para el resultado final asi se 
 aprecia su trabajo en totalidad de los requerimientos solicitados
 ![img_2.png](img_2.png)
+Con el fin de dar solucion a cada una de las incopnitas propuestas en este reto la ultima pregunta es alucion
+a usar el comando "git log --oneline"
+![img_4.png](img_4.png)
 
 ## Preguntas teóricas 
