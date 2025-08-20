@@ -9,8 +9,14 @@ public class reto_3 {
                             sb.append(s);
                         },StringBuilder::append).toString();
     }
+    public static String reverseMessage(String message) {
+        StringBuffer buffer = new StringBuffer(message);
+        return buffer.reverse().toString();
+    }
 
     public static void main(String[] args) {
         System.out.println(repeatMessage("Hello"));
+        System.out.println(reverseMessage("Hello"));
     }
+
 }
