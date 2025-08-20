@@ -40,14 +40,23 @@ public class CarreraParalela {
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(10);
-        numbers.add(212);
-        numbers.add(3);
-        numbers.add(20);
-        numbers.add(42);
-        numbers.add(5);
-        System.out.println(maximum(numbers));
-        System.out.println(minunum(numbers));
+        ArrayList<Integer> numbers1 = new ArrayList<>();
+        numbers1.add(10);
+        numbers1.add(212);
+        numbers1.add(3);
+        numbers1.add(20);
+        numbers1.add(42);
+        numbers1.add(5);
+        ArrayList<Integer> numbers2 = new ArrayList<>();
+        numbers2.add(10);
+        numbers2.add(212);
+        numbers2.add(3);
+        numbers2.add(20);
+        numbers2.add(42);
+        numbers2.add(5);
+
+        Result result = new Result(numbers1, numbers2);
+
+        System.out.println(result);
     }
 }
