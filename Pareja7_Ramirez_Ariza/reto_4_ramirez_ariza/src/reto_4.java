@@ -30,21 +30,32 @@ public class reto_4 {
         return mergedMap;
     }
 
+    public static Map<String, Integer> upperCaseKeys(Map<String, Integer> map) {
+        Map<String, Integer> result = new HashMap<>();
+
+        map.entrySet().stream()
+                .map(entry -> Map.entry(entry.getKey().toUpperCase(), entry.getValue()))
+                .forEach(entry -> result.putIfAbsent(entry.getKey(), entry.getValue()));
+
+        return result;
+    }
+
     public static void main(String[] args) {
         List<SimpleEntry<String, Integer>> input1 = List.of(
-                new SimpleEntry<>("A", 1),
-                new SimpleEntry<>("B", 2),
-                new SimpleEntry<>("A", 3),
-                new SimpleEntry<>("C", 4)
+                new SimpleEntry<>("oro", 5),
+                new SimpleEntry<>("plata", 2),
+                new SimpleEntry<>("oro", 7),
+                new SimpleEntry<>("diamante", 10)
         );
         List<SimpleEntry<String, Integer>> input2 = List.of(
-                new SimpleEntry<>("A", 1),
-                new SimpleEntry<>("B", 2),
-                new SimpleEntry<>("F", 3),
-                new SimpleEntry<>("D", 4)
+                new SimpleEntry<>("plata", 8),
+                new SimpleEntry<>("rubí", 4),
+                new SimpleEntry<>("oro", 12),
+                new SimpleEntry<>("esmeralda", 6)
         );
-        System.out.println(storeUniqueKeysMap(input));
-        System.out.println(storeUniqueKeysTable(input));
-        System.out.println(mergeMaps(storeUniqueKeysMap(input), storeUniqueKeysTable(input)));
+        System.out.println(storeUniqueKeysMap(input1));
+        System.out.println(storeUniqueKeysTable(input1));
+        System.out.println(mergeMaps(storeUniqueKeysMap(input1), storeUniqueKeysTable(input2)));
+        System.out.println(upperCaseKeys(storeUniqueKeysMap(input1)));
     }
 }
