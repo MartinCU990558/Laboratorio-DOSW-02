@@ -7,7 +7,6 @@ import java.util.Map;
 public class reto_4 {
     public static Map<String, Integer> storeUniqueKeysMap(List<SimpleEntry<String, Integer>> entries) {
         Map<String, Integer> result = new HashMap<>();
-
         for (SimpleEntry<String, Integer> entry : entries) {
             result.putIfAbsent(entry.getKey(), entry.getValue());
         }
