@@ -4,8 +4,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class reto_4 {
-    public static Map<String, Integer> storeUniqueKeysMap(List<SimpleEntry<String, Integer>> entries) {
-        Map<String, Integer> result = new HashMap<>();
+    public static HashMap<String, Integer> storeUniqueKeysMap(List<SimpleEntry<String, Integer>> entries) {
+        HashMap<String, Integer> result = new HashMap<>();
         for (SimpleEntry<String, Integer> entry : entries) {
             result.putIfAbsent(entry.getKey(), entry.getValue());
         }
@@ -22,7 +22,7 @@ public class reto_4 {
         return result;
     }
 
-    public static Map<String, Integer> mergeMaps(Map<String, Integer> map1, Map<String, Integer> map2) {
+    public static Map<String, Integer> mergeMaps(HashMap<String, Integer> map1, Hashtable<String, Integer> map2) {
         Map<String, Integer> mergedMap = new HashMap<>();
         mergedMap.putAll(map2);
         mergedMap.putAll(map1);
@@ -63,7 +63,7 @@ public class reto_4 {
             List<SimpleEntry<String, Integer>> listMap,
             List<SimpleEntry<String, Integer>> listTable
     ) {
-        Map<String, Integer> hashMap = storeUniqueKeysMap(listMap);
+        HashMap<String, Integer> hashMap = storeUniqueKeysMap(listMap);
         Hashtable<String, Integer> hashTable = storeUniqueKeysTable(listTable);
         Map<String, Integer> merged = mergeMaps(hashMap, hashTable);
         Map<String, Integer> upperCased = upperCaseKeys(merged);
