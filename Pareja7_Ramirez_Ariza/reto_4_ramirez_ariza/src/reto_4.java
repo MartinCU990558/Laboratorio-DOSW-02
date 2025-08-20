@@ -1,6 +1,7 @@
 import java.util.*;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class reto_4 {
     public static Map<String, Integer> storeUniqueKeysMap(List<SimpleEntry<String, Integer>> entries) {
@@ -44,6 +45,28 @@ public class reto_4 {
         return result;
     }
 
+    public static Map<String, Integer> combineAndTransform(
+            Map<String, Integer> hashMap,
+            Hashtable<String, Integer> hashTable
+    ) {
+        return Stream.concat(hashMap.entrySet().stream(), hashTable.entrySet().stream())
+                .map(entry -> Map.entry(entry.getKey().toUpperCase(), entry.getValue()))
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (hashMapValue, hashTableValue) -> hashTableValue, // Prioriza Hashtable
+                        LinkedHashMap::new
+                ))
+                .entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (v1, v2) -> v1,
+                        LinkedHashMap::new
+                ));
+    }
+
     public static void main(String[] args) {
         List<SimpleEntry<String, Integer>> input1 = List.of(
                 new SimpleEntry<>("oro", 5),
@@ -62,5 +85,11 @@ public class reto_4 {
         System.out.println(mergeMaps(storeUniqueKeysMap(input1), storeUniqueKeysTable(input2)));
         System.out.println(upperCaseKeys(storeUniqueKeysMap(input1)));
         System.out.println(sortMapByKeyAscending(storeUniqueKeysTable(input1)));
+
+        Map<String, Integer> hashMap = storeUniqueKeysMap(input1);
+        Hashtable<String, Integer> hashTable = storeUniqueKeysTable(input2);
+
+        Map<String, Integer> finalResult = combineAndTransform(hashMap, hashTable);
+        System.out.println(finalResult);
     }
 }
