@@ -1,5 +1,7 @@
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class CarreraParalela {
     public static int maximum(ArrayList<Integer> numbers) {
@@ -13,6 +15,10 @@ public class CarreraParalela {
         result.add(minX);
         result.add(sizeX);
         return result;
+    }
+
+    public static ArrayList<Integer> mergeList(ArrayList<Integer> max, ArrayList<Integer> minAndSize) {
+        return Stream.concat(minAndSize.stream(), max.stream()).collect(Collectors.toCollection(ArrayList::new));
     }
 
     public static void main(String[] args) {
