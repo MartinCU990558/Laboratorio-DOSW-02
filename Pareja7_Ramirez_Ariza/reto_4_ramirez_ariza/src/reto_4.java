@@ -24,8 +24,8 @@ public class reto_4 {
 
     public static Map<String, Integer> mergeMaps(HashMap<String, Integer> map1, Hashtable<String, Integer> map2) {
         Map<String, Integer> mergedMap = new HashMap<>();
-        mergedMap.putAll(map2);
         mergedMap.putAll(map1);
+        mergedMap.putAll(map2);
         return mergedMap;
     }
 
