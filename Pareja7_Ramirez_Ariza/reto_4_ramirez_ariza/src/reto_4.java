@@ -59,15 +59,11 @@ public class reto_4 {
                 ));
     }
 
-    public static Map<String, Integer> finalFeature(
-            List<SimpleEntry<String, Integer>> listMap,
-            List<SimpleEntry<String, Integer>> listTable
-    ) {
+    public static Map<String, Integer> finalFeature(List<SimpleEntry<String, Integer>> listMap, List<SimpleEntry<String, Integer>> listTable) {
         HashMap<String, Integer> hashMap = storeUniqueKeysMap(listMap);
         Hashtable<String, Integer> hashTable = storeUniqueKeysTable(listTable);
-        Map<String, Integer> merged = mergeMaps(hashMap, hashTable);
-        Map<String, Integer> upperCased = upperCaseKeys(merged);
-        return sortMapByKeyAscending(upperCased);
+
+        return sortMapByKeyAscending(upperCaseKeys(mergeMaps(hashMap, hashTable)));
     }
 
     public static void main(String[] args) {
