@@ -20,6 +20,7 @@ public class reto_3 {
     public static void main(String[] args) {
         System.out.println(repeatMessage("Hello"));
         System.out.println(reverseMessage("Hello"));
+        System.out.println(repeatAndReverse("Hello"));
     }
 
 }
