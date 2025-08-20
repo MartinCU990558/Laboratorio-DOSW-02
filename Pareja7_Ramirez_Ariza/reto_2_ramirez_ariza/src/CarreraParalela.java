@@ -21,6 +21,10 @@ public class CarreraParalela {
         return Stream.concat(minAndSize.stream(), max.stream()).collect(Collectors.toCollection(ArrayList::new));
     }
 
+    public static boolean validateMultipleOfTwo(ArrayList<Integer> numbers) {
+        return maximum(numbers) % 2 == 0 ? true: false;
+    }
+
     public static void main(String[] args) {
         ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(10);
