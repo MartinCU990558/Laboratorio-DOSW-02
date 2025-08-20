@@ -25,6 +25,10 @@ public class CarreraParalela {
         return maximum(numbers) % 2 == 0 ? true: false;
     }
 
+    public static boolean validateEvenSize(ArrayList<Integer> numbers) {
+        return minunum(numbers).get(1) % 2 == 0 ? true: false;
+    }
+
     public static void main(String[] args) {
         ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(10);
