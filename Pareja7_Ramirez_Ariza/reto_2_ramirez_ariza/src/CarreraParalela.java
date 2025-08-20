@@ -17,6 +17,10 @@ public class CarreraParalela {
         return result;
     }
 
+    public static boolean validateOddSize(ArrayList<Integer> numbers) {
+        return minimum(numbers).get(1) % 2 != 0 ? true: false;
+    }
+
     public static Boolean validateDivOfTwo(ArrayList<Integer> numbers) {
         return 2 % maximum(numbers) == 0 ? true: false;
 
