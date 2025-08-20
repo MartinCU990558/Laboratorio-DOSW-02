@@ -2,14 +2,14 @@ package Cepeda_Guarnizo.reto1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class reto1 {
+public class Reto1 {
     private estudiante estudiante1;
     private estudiante estudiante2;
     private List<estudiante> estudiantes;
     private mensaje mensaje;
     private String mensajeYa;
 
-    public reto1() {
+    public Reto1() {
         estudiantes = new ArrayList<>();
         estudiante1 = new estudiante("Carolina Cepeda", "carolina.cepeda-v@mail.escualaing.edu.co", 20, 6);
         estudiante2 = new estudiante("Manuel Guarnizo", "manuel.guarnizo-g@mail.escuelaing.edu.co", 19, 6);
@@ -26,7 +26,7 @@ public class reto1 {
     }
 
     public static void main(String[] args) {
-        reto1 r = new reto1();
+        Reto1 r = new Reto1();
         System.out.println(r.getMensajeYa());
     }
 }
