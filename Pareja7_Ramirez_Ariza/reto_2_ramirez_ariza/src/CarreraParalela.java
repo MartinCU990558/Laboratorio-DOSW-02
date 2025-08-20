@@ -17,6 +17,11 @@ public class CarreraParalela {
         return result;
     }
 
+    public static Boolean validateDivOfTwo(ArrayList<Integer> numbers) {
+        return 2 % maximum(numbers) == 0 ? true: false;
+
+    }
+
     public static ArrayList<Integer> mergeList(ArrayList<Integer> max, ArrayList<Integer> minAndSize) {
         return Stream.concat(minAndSize.stream(), max.stream()).collect(Collectors.toCollection(ArrayList::new));
     }
