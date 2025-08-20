@@ -45,19 +45,11 @@ public class reto_4 {
         return result;
     }
 
-    public static Map<String, Integer> combineAndTransform(
-            Map<String, Integer> hashMap,
-            Hashtable<String, Integer> hashTable
-    ) {
+    public static Map<String, Integer> combineAndTransform( Map<String, Integer> hashMap,Hashtable<String, Integer> hashTable) {
         return Stream.concat(hashMap.entrySet().stream(), hashTable.entrySet().stream())
                 .map(entry -> Map.entry(entry.getKey().toUpperCase(), entry.getValue()))
-                .collect(Collectors.toMap(
-                        Map.Entry::getKey,
-                        Map.Entry::getValue,
-                        (hashMapValue, hashTableValue) -> hashTableValue, // Prioriza Hashtable
-                        LinkedHashMap::new
-                ))
-                .entrySet().stream()
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,(hashMapValue, hashTableValue) -> hashTableValue, LinkedHashMap::new
+                )).entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
@@ -65,6 +57,17 @@ public class reto_4 {
                         (v1, v2) -> v1,
                         LinkedHashMap::new
                 ));
+    }
+
+    public static Map<String, Integer> finalFeature(
+            List<SimpleEntry<String, Integer>> listMap,
+            List<SimpleEntry<String, Integer>> listTable
+    ) {
+        Map<String, Integer> hashMap = storeUniqueKeysMap(listMap);
+        Hashtable<String, Integer> hashTable = storeUniqueKeysTable(listTable);
+        Map<String, Integer> merged = mergeMaps(hashMap, hashTable);
+        Map<String, Integer> upperCased = upperCaseKeys(merged);
+        return sortMapByKeyAscending(upperCased);
     }
 
     public static void main(String[] args) {
@@ -91,5 +94,6 @@ public class reto_4 {
 
         Map<String, Integer> finalResult = combineAndTransform(hashMap, hashTable);
         System.out.println(finalResult);
+        System.out.println( finalFeature(input1, input2));
     }
 }
