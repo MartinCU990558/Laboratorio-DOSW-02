@@ -37,7 +37,6 @@ public class reto_4 {
 
     public static Map<String, Integer> upperCaseKeys(Map<String, Integer> map) {
         Map<String, Integer> result = new HashMap<>();
-
         map.entrySet().stream()
                 .map(entry -> Map.entry(entry.getKey().toUpperCase(), entry.getValue()))
                 .forEach(entry -> result.putIfAbsent(entry.getKey(), entry.getValue()));
