@@ -16,13 +16,23 @@ public class reto_5 {
         return set;
     }
 
+    public static Set<Integer> combineAll(Set<Integer> set1, Set<Integer> set2) {
+        set1.addAll(set2);
+        return set1;
+
+    }
+
 
     public static void main(String[] args) {
-        List<Integer> listaHashSet = List.of(4, 9, 15, 7, 18, 21, 10, 5);
-        List<Integer> listaTreeSet = List.of(12, 3, 25, 10, 7, 30, 18, 4);
+        List<Integer> listHashSet = List.of(4, 9, 15, 7, 18, 21, 10, 5);
+        List<Integer> listTreeSet = List.of(12, 3, 25, 10, 7, 30, 18, 4);
 
-        System.out.println(filterMultiplesOfThree(listaHashSet));
-        System.out.println(filterMultiplesOfFive(listaHashSet));
+        System.out.println(filterMultiplesOfThree(listHashSet));
+        System.out.println(filterMultiplesOfFive(listHashSet));
+        Set<Integer> set = new TreeSet<>(combineAll(filterMultiplesOfThree(listHashSet), filterMultiplesOfFive(listTreeSet)));
+
+        set.stream().forEach(n -> System.out.println("Número en arena: " + n));
+
     }
 
 }
