@@ -6,6 +6,15 @@ public class CarreraParalela {
         return numbers.stream().max(Integer::compareTo).get();
     }
 
+    public static ArrayList<Integer> minunum(ArrayList<Integer> numbers) {
+        int  minX = numbers.stream().min(Integer::compareTo).get();
+        int sizeX = numbers.size();
+        ArrayList<Integer> result = new ArrayList<>();
+        result.add(minX);
+        result.add(sizeX);
+        return result;
+    }
+
     public static void main(String[] args) {
         ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(10);
