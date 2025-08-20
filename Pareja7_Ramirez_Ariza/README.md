@@ -18,6 +18,7 @@ Descripción breve de lo que hicieron.
 ### Reto 2: Commit colaborativo
 ** Evidencia :**
 
+Reto 2 subido en la segunda rama
 Iffantural(imanenec /ratn) lnn nnal
 
 ## Preguntas teóricas 
