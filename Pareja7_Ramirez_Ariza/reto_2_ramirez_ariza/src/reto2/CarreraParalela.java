@@ -18,6 +18,15 @@ public class CarreraParalela {
         return result;
     }
 
+    public static boolean validateOddSize(ArrayList<Integer> numbers) {
+        return minunum(numbers).get(1) % 2 != 0 ? true: false;
+    }
+
+    public static Boolean validateDivOfTwo(ArrayList<Integer> numbers) {
+        return 2 % maximum(numbers) == 0 ? true: false;
+
+    }
+
     public static ArrayList<Integer> mergeList(ArrayList<Integer> max, ArrayList<Integer> minAndSize) {
         return Stream.concat(minAndSize.stream(), max.stream()).collect(Collectors.toCollection(ArrayList::new));
     }
