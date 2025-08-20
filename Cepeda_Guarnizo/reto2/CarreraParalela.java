@@ -1,34 +1,25 @@
-package Cepeda_Guarnizo.reto2;
 
-<<<<<<< HEAD
-public class Reto2 {
-    
-}
-=======
+package Cepeda_Guarnizo;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 public class CarreraParalela{
-
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         String entrada = scan.nextLine().trim();
-       
         if (entrada.startsWith("{") && entrada.endsWith("}")) {
-                List<Integer> numeros = Arrays.stream(
-                        entrada.substring(1, entrada.length() - 1).split(","))
-                        .map(String::trim)
-                        .map(Integer::parseInt)
-                        .collect(Collectors.toList());
+            List<Integer> numeros = Arrays.stream(
+                    entrada.substring(1, entrada.length() - 1).split(","))
+                    .map(String::trim)
+                    .map(Integer::parseInt)
+                    .collect(Collectors.toList());
 
-                Function<List<Integer>, String> resultado = lista -> {
-                    int min = lista.stream().min(Integer::compareTo).get();
-                 
-                    return min + " " +lista.size();
-                };
+            Function<List<Integer>, String> resultado = lista -> {
+                int min = lista.stream().min(Integer::compareTo).get();
+                return min + " " +lista.size();
+            };
 
-                System.out.println(resultado.apply(numeros));
-            }
+            System.out.println(resultado.apply(numeros));
         }
     }
->>>>>>> 0ab21a08319a59df03eaf7948889727e90696bc1
+}
