@@ -1,8 +1,6 @@
+import java.util.*;
 import java.util.AbstractMap.SimpleEntry;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.List;
-import java.util.Map;
+import java.util.stream.Collectors;
 
 public class reto_4 {
     public static Map<String, Integer> storeUniqueKeysMap(List<SimpleEntry<String, Integer>> entries) {
@@ -29,9 +27,16 @@ public class reto_4 {
         return mergedMap;
     }
 
+    public static Map<String, Integer> sortMapByKeyAscending(Map<String, Integer> map) {
+        return map.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
+                (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+    }
+
     public static void main(String[] args) {
         List<SimpleEntry<String, Integer>> input1 = List.of(
-                new SimpleEntry<>("A", 1),
+                new SimpleEntry<>("Z", 1),
                 new SimpleEntry<>("B", 2),
                 new SimpleEntry<>("A", 3),
                 new SimpleEntry<>("C", 4)
@@ -46,5 +51,6 @@ public class reto_4 {
         System.out.println(storeUniqueKeysMap(input1));
         System.out.println(storeUniqueKeysTable(input1));
         System.out.println(mergeMaps(storeUniqueKeysMap(input1), storeUniqueKeysTable(input2)));
+        System.out.println(sortMapByKeyAscending(storeUniqueKeysTable(input1)));
     }
 }
