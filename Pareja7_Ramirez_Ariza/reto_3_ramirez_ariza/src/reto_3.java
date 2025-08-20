@@ -13,6 +13,9 @@ public class reto_3 {
         StringBuffer buffer = new StringBuffer(message);
         return buffer.reverse().toString();
     }
+    public static String repeatAndReverse(String message) {
+        return reverseMessage(repeatMessage(message));
+    }
 
     public static void main(String[] args) {
         System.out.println(repeatMessage("Hello"));
