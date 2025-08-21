@@ -20,8 +20,8 @@ public class CarreraParalela {
             Function<List<Integer>, String> resultado = lista -> {
                 int min = lista.stream().min(Integer::compareTo).get();
                 int maximo = lista.stream().max(Integer::compareTo).get();
-
-                return "minimo" + min + " maximo" + maximo + " cantidad" + lista.size();
+                String esDivisor = (2 % maximo == 0) ? "Es divisor de 2" : "No es divisor de 2";
+                return "minimo" + min + " maximo" + maximo + esDivisor + " " + "cantidad" + lista.size();
             };
 
             System.out.println(resultado.apply(numeros));
