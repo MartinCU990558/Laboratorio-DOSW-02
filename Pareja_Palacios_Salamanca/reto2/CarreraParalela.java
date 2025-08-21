@@ -3,6 +3,7 @@ import java.util.Optional;
 import java.util.Arrays;
 import java.util.Comparator;
 public class CarreraParalela{
+
     public static List<Integer> numeros = Arrays.asList(5, 2, 9, 1, 7, 12, 4);
 
     public static void main(String[] args) {
@@ -16,7 +17,7 @@ public class CarreraParalela{
             System.out.println("El número más grande es: " + maximo.get());
             System.out.println("El número más pequeño es: " + minimo.get());
             System.out.println("La cantidad de números ingresados es: " + cantidad);
-
+            System.out.println((2 % maximo.get() == 0) ? "El maximo es divisor de dos" : "El maximo no es divisor de dos");
         } else {
             System.out.println("La lista está vacía");
         }
