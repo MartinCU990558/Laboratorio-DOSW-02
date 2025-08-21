@@ -7,5 +7,6 @@ public class Reto3{
         StringBuilder string = new StringBuilder();
         string.append(mensaje).append(" ").append(mensaje).append(" ").append(mensaje);
         System.out.println(string);
+
     }
 }
