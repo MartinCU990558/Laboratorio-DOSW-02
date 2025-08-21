@@ -34,8 +34,9 @@ public class Reto5 {
     }
 
     public static SortedSet<Integer> unionOrdenada(Set<Integer> a, Set<Integer> b) {
-
-        return new TreeSet<>();
+        SortedSet<Integer> union = new TreeSet<>(a);
+        union.addAll(b); 
+        return union;
     }
 
     public static void imprimir(SortedSet<Integer> arena) {
