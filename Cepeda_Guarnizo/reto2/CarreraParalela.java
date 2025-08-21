@@ -1,6 +1,3 @@
-
-package Cepeda_Guarnizo.reto2;
-
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -18,12 +15,12 @@ public class CarreraParalela {
                         .map(Integer::parseInt)
                         .collect(Collectors.toList());
 
-            Function<List<Integer>, String> resultado = lista -> {
-                int min = lista.stream().min(Integer::compareTo).get();
-                int maximo = lista.stream().max(Integer::compareTo).get();
-                String esDivisor = (2 % maximo == 0) ? "Es divisor de 2" : "No es divisor de 2";
-                return "minimo" + min + " maximo" + maximo + esDivisor + " " + "cantidad" + lista.size();
-            };
+                Function<List<Integer>, String> resultado = lista -> {
+                    int min = lista.stream().min(Integer::compareTo).get();
+                    int max = lista.stream().max(Integer::compareTo).get();
+                    String esMultiplo =(max%2 ==0)?"es multiplo de 2":"No es multiplo de 2";
+                    return min + " " + max +" " +esMultiplo+" "+lista.size();
+                };
 
             System.out.println(resultado.apply(numeros));
         }
