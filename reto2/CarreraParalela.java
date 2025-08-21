@@ -15,12 +15,6 @@ public class CarreraParalela {
     }
  
 	private static int amount(List<Integer> l){return (int) l.stream().count();}
-public class CarreraParalela {
-    public static void main(String[] args) {}
-
-    public static int getMax(List<Integer> l) {
-        return (l.stream().max(Integer::compare).get());
-    }
 
     public void crash(List<Integer> l) {
         new Result(getMax(l), getMinAndAmount(l).get(0),getMinAndAmount(l).get(1));
