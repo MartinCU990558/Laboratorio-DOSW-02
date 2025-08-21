@@ -31,6 +31,15 @@ de manera manual, ya que se trataba de dos funciones diferentes que hacían lo m
 Manejamos el uso de String builder y StringBuffer, para manejar el eco de la frase que se le pasaba por consola.
 A la hora de resolver el merge, se trataba de dos funciones diferentes que hacían lo mismo, por lo que se resolvió de manera manual, añadiendo las funcionalidades a la rama principal.
 
+### Reto 4: El tesoro de las llaves duplicadas
+**Evidencia**
+![captura](imag/reto4.png)
+Se hace el uso de HashMap ignorando claves duplicadas, y se hace uso de hashTable para mostrar el funcionamiento de metodos similares
+con diferentes colecciones.A la hora de resolver el merge, se hace la inclusión de las funcionalidades de ambas ramas,priorizando los
+valores de hashtable en caso de conflicto.
+
+![captura](imag/reto4.jpg)
+Hacemos uso de una función main para mostrar el funcionamiento de la clase.
 ### Reto 5 :Batalla de conjuntos
 **Evidencia**
 ![captura](imag/reto5.png)
