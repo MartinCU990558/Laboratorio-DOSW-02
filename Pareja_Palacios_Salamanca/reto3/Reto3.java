@@ -6,7 +6,8 @@ public class Reto3{
     public static void eco(String mensaje){
         StringBuilder string = new StringBuilder();
         string.append(mensaje).append(" ").append(mensaje).append(" ").append(mensaje);
-        System.out.println(string);
-
+        StringBuffer string2 = new StringBuffer(string);
+        string2.reverse().toString();
+        System.out.println(string2);
     }
 }
