@@ -24,7 +24,7 @@ public class CarreraParalela {
                 String esImpar = (lista.size() % 2 != 0) ? "La cantidad es impar" : "La cantidad es par";
                 String esMultiplo =(maximo%2 ==0)?"es multiplo de 2":"No es multiplo de 2";
 
-                return "minimo" + min + " maximo" + maximo + esDivisor + "y "+ esMultiplo + "cantidad" + lista.size() + esImpar;
+                return "minimo " + min + " maximo " + maximo + esDivisor + "y "+ esMultiplo + "cantidad " + lista.size() + esImpar;
             };
 
             System.out.println(resultado.apply(numeros));
