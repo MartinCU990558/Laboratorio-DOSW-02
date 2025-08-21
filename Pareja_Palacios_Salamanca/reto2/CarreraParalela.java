@@ -7,10 +7,10 @@ public class CarreraParalela{
     public static List<Integer> numeros = Arrays.asList(5, 2, 9, 1, 7, 12, 4);
 
     public static void main(String[] args) {
-        calcularMinimoYCantidad();
+        numero();
     }
 
-    private static void calcularMinimoYCantidad(){
+    private static void  numero(){
         Optional<Integer> minimo = numeros.stream()
                 .min((a, b) -> a - b);
         long cantidad = numeros.stream().count();
