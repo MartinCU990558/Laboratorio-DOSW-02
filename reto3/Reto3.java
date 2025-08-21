@@ -1,7 +1,8 @@
 package reto3;
 
 class Reto3 {
-    public static Function<String, String> invertir() {
+    public static String invertir() {
         return mensaje -> new StringBuffer(mensaje).reverse().toString();
     }
+
 }
