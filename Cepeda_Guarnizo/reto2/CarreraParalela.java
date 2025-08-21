@@ -1,6 +1,3 @@
-
-package Cepeda_Guarnizo.reto2;
-
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -20,8 +17,8 @@ public class CarreraParalela{
                 Function<List<Integer>, String> resultado = lista -> {
                     int min = lista.stream().min(Integer::compareTo).get();
                     int max = lista.stream().max(Integer::compareTo).get();
-                 
-                    return "min" + min + " max"+ max+" cant" +lista.size();
+                    String esMultiplo =(max%2 ==0)?"es multiplo de 2":"No es multiplo de 2";
+                    return min + " " + max +" " +esMultiplo+" "+lista.size();
                 };
 
                 System.out.println(resultado.apply(numeros));
