@@ -32,6 +32,7 @@ public class CarreraParalela{
             System.out.println((cantidad % 2 == 0) ? "La cantidad de datos de la lista de numeros es par" : "La cantidad de datos de la lista de numeros es par");
             System.out.println((cantidad % 2 != 0) ? "La cantidad de números ingresados es impar" : "La cantidad de números ingresados es par");
         }
+
         else {
             System.out.println("La lista está vacía");
         }
