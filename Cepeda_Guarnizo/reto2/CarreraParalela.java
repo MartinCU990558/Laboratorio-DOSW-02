@@ -1,5 +1,6 @@
 
-package Cepeda_Guarnizo;
+package Cepeda_Guarnizo.reto2;
+
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -11,11 +12,11 @@ public class CarreraParalela {
         String entrada = scan.nextLine().trim();
 
         if (entrada.startsWith("{") && entrada.endsWith("}")) {
-            List<Integer> numeros = Arrays.stream(
-                    entrada.substring(1, entrada.length() - 1).split(","))
-                    .map(String::trim)
-                    .map(Integer::parseInt)
-                    .collect(Collectors.toList());
+                List<Integer> numeros = Arrays.stream(
+                        entrada.substring(1, entrada.length() - 1).split(","))
+                        .map(String::trim)
+                        .map(Integer::parseInt)
+                        .collect(Collectors.toList());
 
             Function<List<Integer>, String> resultado = lista -> {
                 int min = lista.stream().min(Integer::compareTo).get();
