@@ -7,5 +7,6 @@ public class Reto3{
         StringBuffer string = new StringBuffer(mensaje);
         string.reverse().toString();
         System.out.println(string);
+
     }
 }
