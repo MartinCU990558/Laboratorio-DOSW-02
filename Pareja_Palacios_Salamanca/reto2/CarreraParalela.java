@@ -19,7 +19,8 @@ public class CarreraParalela{
             System.out.println("La cantidad de números ingresados es: " + cantidad);
             System.out.println(maximo.get() % 2 == 0 ? "el numero es multiplo de 2" : "el numero no es multiplo de 2" );
             System.out.println((2 % maximo.get() == 0) ? "El maximo es divisor de dos" : "El maximo no es divisor de dos");
-        } else {
+        }
+        else {
             System.out.println("La lista está vacía");
         }
     }
