@@ -8,7 +8,6 @@ public class CarreraParalela{
     public static void main(String[] args) {
         numero();
     }
-    }
     private static void numero(){
         Optional<Integer> maximo = numeros.stream().max((a, b) -> a - b);
         Optional<Integer> minimo = numeros.stream().min((a, b) -> a - b);
