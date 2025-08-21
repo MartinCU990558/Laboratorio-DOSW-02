@@ -21,7 +21,8 @@ public class CarreraParalela {
                 int min = lista.stream().min(Integer::compareTo).get();
                 int maximo = lista.stream().max(Integer::compareTo).get();
                 String esDivisor = (2 % maximo == 0) ? "Es divisor de 2" : "No es divisor de 2";
-                return "minimo" + min + " maximo" + maximo + esDivisor + " " + "cantidad" + lista.size();
+                String esImpar = (lista.size() % 2 != 0) ? "La cantidad es impar" : "La cantidad es par";
+                return "minimo" + min + " maximo" + maximo + esDivisor + " " + "cantidad" + lista.size() + esImpar;
             };
 
             System.out.println(resultado.apply(numeros));
