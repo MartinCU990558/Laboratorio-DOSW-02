@@ -3,10 +3,13 @@ package Cepeda_Guarnizo;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-public class CarreraParalela{
-    public static void main(String[] args){
+
+public class CarreraParalela {
+
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String entrada = scan.nextLine().trim();
+
         if (entrada.startsWith("{") && entrada.endsWith("}")) {
             List<Integer> numeros = Arrays.stream(
                     entrada.substring(1, entrada.length() - 1).split(","))
@@ -16,7 +19,9 @@ public class CarreraParalela{
 
             Function<List<Integer>, String> resultado = lista -> {
                 int min = lista.stream().min(Integer::compareTo).get();
-                return min + " " +lista.size();
+                int maximo = lista.stream().max(Integer::compareTo).get();
+                String esDivisor = (2 % maximo == 0) ? "Es divisor de 2" : "No es divisor de 2";
+                return "minimo" + min + " maximo" + maximo + esDivisor + " " + "cantidad" + lista.size();
             };
 
             System.out.println(resultado.apply(numeros));
