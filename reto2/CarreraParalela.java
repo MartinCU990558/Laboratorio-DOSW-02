@@ -3,7 +3,7 @@ package reto2;
 import java.util.Arrays;
 import java.util.List;
 
-<<<<<<< HEAD
+<<<<<<<< HEAD
 import javax.naming.spi.DirStateFactory.Result;
 
 public class CarreraParalela {
