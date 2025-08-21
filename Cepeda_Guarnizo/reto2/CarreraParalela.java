@@ -2,11 +2,13 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+
 public class CarreraParalela {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String entrada = scan.nextLine().trim();
+
 
         if (entrada.startsWith("{") && entrada.endsWith("}")) {
                 List<Integer> numeros = Arrays.stream(
@@ -20,7 +22,9 @@ public class CarreraParalela {
                 int maximo = lista.stream().max(Integer::compareTo).get();
                 String esDivisor = (2 % maximo == 0) ? "Es divisor de 2" : "No es divisor de 2";
                 String esImpar = (lista.size() % 2 != 0) ? "La cantidad es impar" : "La cantidad es par";
-                return "minimo" + min + " maximo" + maximo + esDivisor + " " + "cantidad" + lista.size() + esImpar;
+                String esMultiplo =(maximo%2 ==0)?"es multiplo de 2":"No es multiplo de 2";
+
+                return "minimo" + min + " maximo" + maximo + esDivisor + "y "+ esMultiplo + "cantidad" + lista.size() + esImpar;
             };
 
             System.out.println(resultado.apply(numeros));
