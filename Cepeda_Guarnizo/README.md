@@ -49,3 +49,32 @@ Manejamos el uso de conjuntos, y a la hora de resolver el merge, se trataba de d
 ![captura](imag/reto6.png)
 Manejamos el uso de la interfaz run para manejar ka ejecución de cada acción, a la hora de resolver el merge conflict decidimos manejarlo con un mapa para que se maneje como un menu de todas las acciones que se pueden realizar, y cada una de estas acciones se ejecuta dependiendo de la opción que elija el usuario.
 ![captura](imag/reto6.jpg)
+
+## Cuestionario
+
+6. Qué diferencia hay entre HashMap y HashTable? 
+    La diferencia es que un Hashmap no es sincronizado, lo que significa que no es seguro para el acceso  por múltiples hilos, mientras que un Hashtable si lo es. Además, HashMap permite un valor nulo para la clave y el valor, mientras que Hashtable no permite valores nulos.
+
+7. Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional para llenar un mapa? 
+    Las ventajas de usar Collectors.toMap() es que es más conciso y legible, ya que permite crear un mapa directamente a partir de una colección sin necesidad de escribir un bucle de forma explícita. Además, se pueden aplicar funciones de transformación y filtrado de manera más sencilla, lo que mejora la eficiencia y claridad del código.
+
+8. Si usas List con objetos y luego aplicas stream().map() que tipo de operación estas haciendo? 
+    Estás realizando una operación de transformación, donde cada objeto de la lista se convierte en otro tipo de objeto o se extrae un atributo específico de cada objeto.
+
+9. Que hace el método stream().filter() y que retorna? 
+    El método stream().filter() aplica un filtro a los elementos del flujo, permitiendo pasar solo aquellos que cumplen con una condición específica. Retorna un nuevo stream que contiene solo los elementos que cumplen con el criterio de filtrado.
+
+10.Describe el paso a paso de cómo crear una rama desde develop si es una funcionalidad nueva. 
+    1. Asegúrate de estar en la rama develop ejecutando `git checkout develop`.
+    2. Actualiza la rama develop con los últimos cambios del repositorio remoto ejecutando `git pull origin develop`.
+    3. Crea una nueva rama para la funcionalidad nueva ejecutando `git checkout -b feature/nombre_de_la_funcionalidad`.
+    4. Realiza los cambios necesarios en el código.
+    5. Agrega los cambios al área de preparación con `git add .`.
+    6. Realiza un commit con un mensaje descriptivo usando `git commit -m "Descripción de los cambios"`.
+    7. Sube la nueva rama al repositorio remoto con `git push origin feature/nombre_de_la_funcionalidad`.
+
+11. ¿Cuál es la diferencia entre crear una rama con git branch y con git checkout -b? 
+    La diferencia es que `git branch` solo crea una nueva rama sin cambiar a ella, mientras que `git checkout -b` crea una nueva rama y cambia inmediatamente a esa rama, permitiendo comenzar a trabajar en ella de inmediato.
+
+12. ¿Por qué es recomendable crear ramas feature/ para nuevas funcionalidades en lugar de trabajar en main directamente? 
+    Es recomendable crear ramas feature/ para nuevas funcionalidades porque permite un desarrollo más organizado y aislado. Esto evita conflictos en la rama principal y facilita la revisión de código, pruebas y la integración de nuevas funcionalidades sin afectar el código estable.
