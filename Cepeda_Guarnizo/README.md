@@ -30,6 +30,11 @@ de manera manual, ya que se trataba de dos funciones diferentes que hacían lo m
 ![captura](imag/reto3.png)
 Manejamos el uso de String builder y StringBuffer, para manejar el eco de la frase que se le pasaba por consola.
 A la hora de resolver el merge, se trataba de dos funciones diferentes que hacían lo mismo, por lo que se resolvió de manera manual, añadiendo las funcionalidades a la rama principal.
+
+### Reto 5 :Batalla de conjuntos
+**Evidencia**
+![captura](imag/reto5.png)
+Manejamos el uso de conjuntos, y a la hora de resolver el merge, se trataba de dos funciones diferentes que hacían practicamente lo mismo, por lo que se resolvió de manera manual, añadiendo las funcionalidades a la rama principal.
 ### Reto 6: La maquina de decisiones
 **Evidencia**
 ![captura](imag/reto6.png)
