@@ -1,6 +1,7 @@
 package Cepeda_Guarnizo.reto5;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Reto5 {
 
@@ -9,7 +10,16 @@ public class Reto5 {
     }
 
     public static Set<Integer> treeSet(int cantidad, int min, int max) {
-        return new TreeSet<>();
+        Random random = new Random();
+        Set<Integer> numeros = new TreeSet<>();
+
+        while (numeros.size() < cantidad) {
+            int num_aleatorio = random.nextInt(max - min + 1) + min;
+            numeros.add(num_aleatorio);
+        }
+        return numeros.stream()
+                .filter(n -> n % 5 != 0)
+                .collect(Collectors.toCollection(TreeSet::new));
     }
 
     public static SortedSet<Integer> unionOrdenada(Set<Integer> a, Set<Integer> b) {
