@@ -16,9 +16,11 @@ public class CarreraParalela{
             System.out.println("El número más grande es: " + maximo.get());
             System.out.println("El número más pequeño es: " + minimo.get());
             System.out.println("La cantidad de números ingresados es: " + cantidad);
-
+            System.out.println(maximo.get() % 2 == 0 ? "el numero es multiplo de 2" : "el numero no es multiplo de 2" );
         } else {
             System.out.println("La lista está vacía");
         }
     }
+
+
 }
