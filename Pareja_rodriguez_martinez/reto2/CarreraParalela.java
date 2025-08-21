@@ -4,8 +4,8 @@ import java.util.List;
 
 public class CarreraParalela {
 
-    public int findMinimum(List<Integer> listOfIntegers ){
-        return listOfIntegers.stream().min(Integer::compare).get();
+    public int findMax(List<Integer> listOfIntegers ){
+        return listOfIntegers.stream().max(Integer::compare).get();
     }
 
 }
