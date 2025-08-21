@@ -23,10 +23,9 @@ public class Reto4 {
         }
     }
 
-    public static HashMap<String, Integer> buildHashMapIgnoringDuplicatesFirst(List<KV> pairs) {
-        HashMap<String, Integer> map = new HashMap<>();
-
-        pairs.forEach(p -> map.putIfAbsent(p.getKey(), p.getValue()));
-        return map;
+    public static Hashtable<String, Integer> buildHashtableIgnoringDuplicatesFirst(List<KV> pairs) {
+        Hashtable<String, Integer> table = new Hashtable<>();
+        pairs.forEach(p -> table.putIfAbsent(p.getKey(), p.getValue()));
+        return table;
     }
 }
