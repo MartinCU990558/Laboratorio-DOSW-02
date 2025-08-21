@@ -2,9 +2,8 @@ package Pareja_Charry_Arenas.reto1;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class Reto1 {
+public class reto1 {
     public static void main(String[] args) {
         List<Estudiante> estudiantes = Arrays.asList(
                 new Estudiante("Marlio Jose Charry Espitia", 19, "marlio.charry-e@mail.escuelaing.edu.co", 6),
