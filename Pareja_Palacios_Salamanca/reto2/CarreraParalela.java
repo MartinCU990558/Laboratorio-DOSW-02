@@ -1,15 +1,25 @@
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Scanner;
 public class CarreraParalela{
-
-    public static List<Integer> numeros = Arrays.asList(5, 2, 9, 1, 7, 12, 4);
-
     public static void main(String[] args) {
-        numero();
+        Scanner scanner = new Scanner(System.in);
+        for(int i=0; i<2; i++){
+            System.out.println("cuantos numeros vas a escribir para la lista "+ i);
+
+            List<Integer> numeros = new ArrayList<>();
+            int cantidad_numeros = Integer.parseInt(scanner.nextLine());
+            for(int j=0; j<cantidad_numeros;j++){
+                int numero = Integer.parseInt(scanner.nextLine());
+                numeros.add(numero);
+            }
+            numero(numeros);
+        }
     }
-    private static void numero(){
+    private static void numero(List<Integer> numeros){
         Optional<Integer> maximo = numeros.stream().max((a, b) -> a - b);
         Optional<Integer> minimo = numeros.stream().min((a, b) -> a - b);
         long cantidad = numeros.stream().count();
