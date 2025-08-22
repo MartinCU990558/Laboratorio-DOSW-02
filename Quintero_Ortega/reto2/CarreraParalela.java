@@ -8,4 +8,10 @@ public class CarreraParalela {
                       .max((a, b) -> a - b)
                       .orElseThrow(() -> new NoSuchElementException("La lista está vacía"));
     }
+
+    public static int minimo(List<Integer> numeros) {
+        return numeros.stream()
+                  .min((a, b) -> a.compareTo(b))
+                  .orElse(0);
+    }
 }
