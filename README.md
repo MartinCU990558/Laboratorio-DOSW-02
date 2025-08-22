@@ -177,9 +177,16 @@ class Reto3 {
 ```
 **Evidencia:**
 Main llamando al método repetirEInvertir
+
+
 ![Captura](imagenes/captura50.png)
+
+
 Output
+
+
 ![Captura](imagenes/captura51.png)
+
 
 ## Reto 4 — El tesoro de las Llaves duplicadas
 
