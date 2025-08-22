@@ -67,4 +67,25 @@ public class Reto4 {
         return mayusOrdenado;
     }
 
+    public static void main(String[] args) {
+        List<KV> datosHashMap = List.of(
+                new KV("oro", 5),
+                new KV("plata", 3),
+                new KV("oro", 7),
+                new KV("diamante", 10)
+        );
+        List<KV> datosHashtable = List.of(
+                new KV("plata", 8),
+                new KV("rubí", 4),
+                new KV("oro", 12),
+                new KV("esmeralda", 6)
+        );
+
+        HashMap<String, Integer> mapaA = buildHashMapIgnoringDuplicatesFirst(datosHashMap);
+        Hashtable<String, Integer> tablaB = buildHashtableIgnoringDuplicatesFirst(datosHashtable);
+
+        System.out.println("RESULTADO");
+        combinarMayusculasYOrdenarImprimiendo(mapaA, tablaB);
+    }
+
 }
