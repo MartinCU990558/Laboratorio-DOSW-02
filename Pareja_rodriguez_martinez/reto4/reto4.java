@@ -23,14 +23,6 @@ public class Reto4 {
                 ));
     }
 
-    public static Hashtable<String, Integer> createHashTable(List<AbstractMap.SimpleEntry<String, Integer>> lista) {
-        Hashtable<String, Integer> tabla = new Hashtable<>();
-
-        lista.stream().forEach(par -> tabla.putIfAbsent(par.getKey(), par.getValue()));
-
-        return tabla;
-    }
-
     public static void convertKeysToUpperCase(Map<String, Integer> mapa) {
         Map<String, Integer> copia = new HashMap<>();
         for (Map.Entry<String, Integer> entry : mapa.entrySet()) {
@@ -38,7 +30,15 @@ public class Reto4 {
         }
         mapa.clear();
         mapa.putAll(copia);
-    }
+
+    public static HashMap<String,Integer> saveInHashMap(List<Object[]> listToSave){
+        return listToSave.stream()
+                .collect(Collectors.toMap(
+                        arr -> (String) arr[0],
+                        arr -> (Integer) arr[1],
+                        (v1, v2) -> v1,
+                        HashMap::new
+                ));
 
     public static Map<String, Integer> sortHashTable(Hashtable<String, Integer> tabla) {
         return tabla.entrySet().stream()
@@ -50,5 +50,3 @@ public class Reto4 {
                         LinkedHashMap::new
                 ));
     }
-
-}
