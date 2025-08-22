@@ -138,11 +138,11 @@
 
    La diferencia principal entre HashMasp y HashTable es que HashMap es más rápido, pero no es muy optimo en multi hilo mientras que el HashTable es más lento, pero todos sus métodos están sincronizados por lo que es seguro de usar para entornos multi hilo.
 
-7**¿Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional para llenar un mapa?**
+7. **¿Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional para llenar un mapa?**
 
    Tiene varias ventajas usar Collectors.toMap() entre estas están: permite una mejor legibilidad en el código, permite un mejor manejo de duplicados, permite la personalización del tipo de mapa, permite crear mapas inmutables de manera directa y permite formas de optimización mediante streams.
 
-8**¿Si usas List con objetos y luego aplicas stream().map() que tipo de operación estas haciendo?**
+8. **¿Si usas List con objetos y luego aplicas stream().map() que tipo de operación estas haciendo?**
 
    Al usar estas operaciones en ese orden la operación que se están realizando es mapeo o transformación sobre los elementos del stream.
 
@@ -150,17 +150,20 @@
 
    El metodo stream().filter() es una operación intermedia  de streams de java que se usa para filtrar elementos en un stream basándose en una condición especifica dada y retorna un stream con los elementos que se filtraron que cumplen la condición dada.
 
-10**Describe el paso a paso de cómo crear una rama desde develop si es una funcionalidad nueva.**
+10. **Describe el paso a paso de cómo crear una rama desde develop si es una funcionalidad nueva.**
 
-   El paso a p[aso para crear una rama desde develop si es una funcionalidad nueva es el siguiente:
-   1.	Sincronizar con el Repositorio Remoto
-   2.	Crear la Nueva Rama usando como convención feature/descripción_breve _de_la_funcion
-   3.	Desarrollar la Funcionalidad
+    El paso a paso para crear una rama desde develop si es una funcionalidad nueva es el siguiente:
 
-11**¿Cuál es la diferencia entre crear una rama con git branch y con git checkout -b?**
+    - Sincronizar con el Repositorio Remoto
+
+    - Crear la Nueva Rama usando como convención feature/descripción_breve _de_la_funcion
+
+    - Desarrollar la Funcionalidad
+
+11. **¿Cuál es la diferencia entre crear una rama con git branch y con git checkout -b?**
 
    La diferencia entre crear una rama con git Branch es que esto la crea, pero no interactúas con ella después mientras que con git checkout -b creas la rama y después de crearla le realizas checkout para poder así realizar cambios directamente después de su creación.
 
-12**¿Por qué es recomendable crear ramas feature/ para nuevas funcionalidades en lugar de trabajar en main directamente?**
+12. **¿Por qué es recomendable crear ramas feature/ para nuevas funcionalidades en lugar de trabajar en main directamente?**
 
    Esto es recomendable debido a que permite primero una mejor organización dentro de ambiente de trabajo y por otra parte permite una mayor facilidad para experimentar con nuevas funcionalidades sin afectar el funcionamiento de la rama principal la cual se espera que sea la mas estable
