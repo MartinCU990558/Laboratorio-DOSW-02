@@ -22,4 +22,33 @@ public class Reto4 {
                         HashMap::new
                 ));
     }
+
+    public static Hashtable<String, Integer> createHashTable(List<AbstractMap.SimpleEntry<String, Integer>> lista) {
+        Hashtable<String, Integer> tabla = new Hashtable<>();
+
+        lista.stream().forEach(par -> tabla.putIfAbsent(par.getKey(), par.getValue()));
+
+        return tabla;
+    }
+
+    public static void convertKeysToUpperCase(Map<String, Integer> mapa) {
+        Map<String, Integer> copia = new HashMap<>();
+        for (Map.Entry<String, Integer> entry : mapa.entrySet()) {
+            copia.put(entry.getKey().toUpperCase(), entry.getValue());
+        }
+        mapa.clear();
+        mapa.putAll(copia);
+    }
+
+    public static Map<String, Integer> sortHashTable(Hashtable<String, Integer> tabla) {
+        return tabla.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (v1, v2) -> v1,
+                        LinkedHashMap::new
+                ));
+    }
+
 }
