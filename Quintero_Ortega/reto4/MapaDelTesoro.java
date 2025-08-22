@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 
 public class MapaDelTesoro {
-    
+
     public static HashMap<String,Integer> construirHashMap(List<Map.Entry<String,Integer>> pares) {
         return pares.stream().collect(
                 Collectors.toMap(
@@ -20,8 +20,14 @@ public class MapaDelTesoro {
     }
 
     public static Hashtable<String,Integer> construirHashtable(List<Map.Entry<String,Integer>> pares) {
-
-        return new Hashtable<>();
+        return pares.stream().collect(
+                Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (primero, ignorado) -> primero,
+                        Hashtable::new
+                )
+        );
     }
 
     public static Map<String,Integer> combinarMapas(Map<String,Integer> hashMap, Map<String,Integer> hashTable) {
@@ -29,7 +35,7 @@ public class MapaDelTesoro {
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
                         Map.Entry::getValue,
-                        (v1, v2) -> v2, // gana Hashtable
+                        (v1, v2) -> v2,
                         HashMap::new
                 ));
     }
@@ -73,6 +79,6 @@ public class MapaDelTesoro {
         Map<String,Integer> m2 = buildTable.apply((List<Map.Entry<String, Integer>>) (List<?>) listaTable);
         Map<String,Integer> combinado = combinarMapas(m1, m2);
         imprimirMayus(combinado);
+        imprimirOrdenado(combinado);
     }
 }
-
