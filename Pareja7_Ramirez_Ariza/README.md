@@ -49,6 +49,41 @@ Cada uno mergeo cada rama individual en la principal del reto, y se solucionaron
 final en el que se utilizaban las funciones anteriores en pro del último paso.
 ![img_9.png](img_9.png)
 
+### Reto 4: El misterio de las llaves misteriosas 
+Cada estudiante crea su propia rama y comienza a resolver el problema correspondiente a su carril. Para el estudiante A
+se creó un bucle que transformara la lista ingresada en un map con ayuda de la funcion ifAbsent para determinar cuando
+agregar o no agregar y evitar duplicados
+![img_10.png](img_10.png)
+en el segundo camino tambien se utilizo un bucle, pero acompañado de una verficacion if para revisar la condicion de 
+duplicados
+![img_11.png](img_11.png)
+Se mezclaron las ramas en la feature del reto y se solucionaron los conflictos del merge. Al igual que con la funcion para
+combinar los mapas, en la cual solo se utilizaron las funciones propias de los maps putAll. Solo hacia falta cambiar el 
+orden en el que se agregaban los datos para que el resultado final fuera el esperado.
+![img_13.png](img_13.png)
+![img_12.png](img_12.png)
+![img_14.png](img_14.png)
+Para crear la función de las claves en mayusculas se tuvo que crear un nuevo mapa, pues no se dejaba editar el mapa original,
+utilizando la función stream se recorrió el mapa y fue agregando clave en mayuscula con su valor original hasta comopletar
+el mapa original con las claves en upperCase.
+![img_15.png](img_15.png)
+de manera similar, se utilizó el stream para convertir el mapa en un flujo, se ordeno las claves y se agregaron a un 
+nuevo mapa, verificando las repeticiones, para que el resultado final fuera el esperado.
+![img_16.png](img_16.png)
+Finalmente se utilizaron todas las funciones anteriores en orden para convertir las listas en maps, combinarlos, luego 
+ordenarlos y convertir las claves a mayusculas siempre teniendo en cuenta que el hashTable tenia prioridad sobre los datos.
+![img_17.png](img_17.png)
+___
+
+### Reto 5: Batalla de conjuntos
+Cada miembro del equipo creo su rama apartir de la rama principal del reto. Y se hicieron dos funciones muy parecidas para
+resolver el problema propuesto. Se creó un hashSet para evitar duplicados y se utilizó una funcion lambda para remover los
+multiplos de tres o de cinco según corresponda para cada usuario. 
+![img_18.png](img_18.png)
+Al momento de mergear no hubo muchos problemas y el merge logro solucionarlo automaticamente solo dejando un cambio sobre 
+el otro. Dado que eran conjuntos los elementos no se repetian y solo se uso la funcion addAll de los sets para agregar los
+de un conjunto en el otro. 
+![img_19.png](img_19.png)
 
 ### Reto 6: La maquina de desiciones
 ** Evidencia :**
