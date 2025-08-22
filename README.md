@@ -218,6 +218,93 @@ class Reto3 {
 ![Captura](imagenes/captura35.png)
 ![Captura](imagenes/captura36.png)
 
+# ⚔️ Reto #5: Batalla de Conjuntos  
+
+En esta arena de batalla, los guerreros son números únicos.  
+Un equipo lucha sin orden (**HashSet**), y otro en orden natural (**TreeSet**).  
+
+Este reto nos permitió practicar:  
+
+- Uso de **HashSet** y **TreeSet**.  
+- Aplicación de **stream().filter()** para filtrar elementos.  
+- Uso de **lambda** para imprimir resultados.  
+- Resolución de conflictos al unir ramas en Git.  
+
+---
+
+## 📌 Misión  
+
+1. **Estudiante A (HashSet)**  
+   - Creó un método en su rama para almacenar números aleatorios sin orden y eliminar los múltiplos de **3**.  
+
+2. **Estudiante B (TreeSet)**  
+   - Creó un método en su rama para almacenar números aleatorios en orden ascendente y eliminar los múltiplos de **5**.  
+
+3. **Choque (Merge Conflict)**  
+   - Se unieron ambas colecciones en una sola estructura ordenada (**TreeSet**), eliminando duplicados.  
+   - Se resolvió el conflicto y se subió la versión final al feature.  
+
+---
+
+## ⚙️ Solución Implementada  
+
+```java
+package reto5;
+
+import java.util.*;
+import java.util.stream.*;
+
+
+public class Reto5 {
+    public static Set<Integer> almacenarA() {
+        HashSet<Integer> numeros = new HashSet<>();
+        Random rand = new Random();
+        for (int i = 0; i < 20; i++) {
+            numeros.add(rand.nextInt(100) + 1);
+        }
+
+        System.out.println("Números generados:");
+        numeros.forEach(n -> System.out.print(n + " "));
+
+        Set<Integer> filtrados = numeros.stream().filter(n -> n % 3 != 0).collect(Collectors.toSet());
+
+        System.out.println("\n\nNúmeros después de eliminar múltiplos de 3:");
+        filtrados.forEach(n -> System.out.print(n + " "));
+        return filtrados;
+    }
+
+    public static Set<Integer> almacenarB() {
+        TreeSet<Integer> numeros = new TreeSet<>();
+        Random rand = new Random();
+
+        for (int i = 0; i < 20; i++) {
+            numeros.add(rand.nextInt(100) + 1);
+        }
+
+        System.out.println("Números generados en orden ascendente:");
+        numeros.forEach(n -> System.out.print(n + " "));
+
+        Set<Integer> filtrados = numeros.stream()
+                .filter(n -> n % 5 != 0)
+                .collect(Collectors.toCollection(TreeSet::new));
+
+        System.out.println("\n\nNúmeros después de eliminar múltiplos de 5:");
+        filtrados.forEach(n -> System.out.print(n + " "));
+        return filtrados;
+    }
+
+    public static void crash(){
+        TreeSet<Integer> union = new TreeSet<>();
+        Set<Integer> setA = almacenarA();
+        Set<Integer> setB = almacenarB();
+        union.addAll(setA);
+        union.addAll(setB);
+        System.out.println("Resultado: ");
+        union.forEach(n -> System.out.print("Número en arena: "+ n + " "));
+    }
+}
+
+```
 
 ## Reto 6 — La máquina de decisiones
 
