@@ -85,10 +85,8 @@ Código: se creó la clase estudiante y la clase mensaje. La clase estudiante ti
 
 
 **Evidencia:**
-![Captura](imagenes/captura.png)
-
 - salida de código 
 ![Captura](imagenes/captura33.png)
 
 - evidencia merges (conflicto/resolución en `registrarAcciones(...)`)  
-![Captura](imagenes/captura42.png)
+![Captura](imagenes/captura34.png)
