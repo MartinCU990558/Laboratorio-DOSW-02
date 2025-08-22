@@ -31,6 +31,8 @@
 
     ![Evidencia Paso Correspondiente](img/5.png)
 
+---
+
 ## Reto 1
 **Evidencia:**
 
@@ -109,4 +111,6 @@
 
   ![Evidencia Paso Correspondiente](img/20.png)
 
+---
 
+## Cuestionario
