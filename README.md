@@ -44,28 +44,16 @@ Descripción breve de lo que hicieron.
 ### Reto 5: (nombre del reto)
 **Evidencia:**  
 ![Captura](./Quintero_Ortega/imagenes/reto5.png)  
-Descripción breve de lo que hicieron.  
+En este ejercicio se aplicaron dos estructuras de datos como lo son los HashSet y los TreeSet para almacenar números aleatorios. Además, fue necesario emplear stream y lambdas con el fin de poder cumplir con los objetivos, que eran:
+	Estudiante A: usar un HashSet para guardar números sin orden y eliminar los múltiplos de 3.
+	Estudiante B: usar un TreeSet para guardar números ordenados y eliminar los múltiplos de 5.
 
 ---
 
 ### Reto 6: (nombre del reto)
 **Evidencia:**  
 ![Captura](./Quintero_Ortega/imagenes/reto6.png)  
-Descripción breve de lo que hicieron.  
-
----
-
-### Reto 7: (nombre del reto)
-**Evidencia:**  
-![Captura](./Quintero_Ortega/imagenes/reto7.png)  
-Descripción breve de lo que hicieron.  
-
----
-
-### Reto 8: (nombre del reto)
-**Evidencia:**  
-![Captura](./Quintero_Ortega/imagenes/reto8.png)  
-Descripción breve de lo que hicieron.  
+Haciendo uso de los switch-case, MAP, la interfaz Runnable y su método run(), pudimos unir los fragmentos del manual de la máquina con el fin de conocer todos los comandos de los que dispone.
 
 ---
 
