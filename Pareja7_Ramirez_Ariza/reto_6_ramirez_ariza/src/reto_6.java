@@ -1,18 +1,23 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Hashtable;
+import java.util.Map;
+
 public class reto_6 {
 
-    public static void act(String comando) {
+    public static void ejecutarComando(String comando) {
         switch (comando.toUpperCase()) {
             case "SALUDAR":
-                System.out.println("¡Saludos, viajero del tiempo y del código!");
+                System.out.println("La máquina dice: ¡Saludos, viajero del tiempo y del código!");
                 break;
             case "DESPEDIR":
-                System.out.println("Que los bits te acompañen, hasta la próxima misión.");
+                System.out.println("La máquina dice: Que los bits te acompañen, hasta la próxima misión.");
                 break;
             case "CANTAR":
-                System.out.println("01010101");
+                System.out.println("La máquina canta: 01010101");
                 break;
             case "DANZAR":
-                System.out.println("Girando en modo fiesta.");
+                System.out.println("La máquina gira y emite chispas: Girando en modo fiesta.");
                 break;
             case "BROMEAR":
                 System.out.println("La máquina ríe: ¿Por qué la RAM rompió con la CPU? Porque necesitaba espacio...");
@@ -30,14 +35,13 @@ public class reto_6 {
     }
 
     public static void main(String[] args) {
-        act("SALUDAR");
-        act("DANZAR");
-        act("CANTAR");
-        act("DESPEDIR");
-        act("HACER CAFÉ");
-        act("BROMEAR");
-        act("GRITAR");
-        act("SUSURRAR");
-        act("ANALIZAR");
+        Map<String, Runnable> map = new Hashtable<>();
+        ArrayList<String> actions = new ArrayList<>(Arrays.asList("SALUDAR", "DANZAR", "CANTAR", "DESPEDIR", "HACER CAFÉ", "BROMEAR", "GRITAR", "SUSURRAR", "ANALIZAR"));
+        for (String action : actions) {
+            map.put(action, () -> ejecutarComando(action));
+            map.get(action).run();
+        }
+
+        map.get("ANALIZAR").run();
     }
 }
