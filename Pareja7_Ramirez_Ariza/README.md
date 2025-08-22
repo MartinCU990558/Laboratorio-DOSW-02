@@ -201,15 +201,14 @@ como clave, mientras que HashTable es sincronizado con varios hilos pero no perm
 
 
 9. Que hace el método stream().filter() y que retorna?
-7. **Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional para llenar un mapa?**
+7. **¿Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional para llenar un mapa?**
 
    Es más conciso, expresivo, funcional y menos propenso a errores que un bucle tradicional, además de ofrecer mejor legibilidad del código.
-8. **Si usas List con objetos y luego aplicas stream().map() que tipo de operación estas haciendo?**
+8. **¿Si usas List con objetos y luego aplicas stream().map() que tipo de operación estas haciendo?**
 
    Es un proceso de transformación que se sitúa a medio camino. Toma cada ítem de la lista, utiliza una función y produce un nuevo flujo con los ítems modificados.
-9. **Que hace el método stream().filter() y que retorna?**
-
-   Filtra elementos del stream basado en una condición,Retorna un nuevo stream(entrada/salida ) que contiene solo los elementos que cumplen la condición.
+9. **¿Qué hace el método stream().filter() y que retorna?**
+   Filtra elementos del stream basado en una condición,retorna un nuevo stream(entrada/salida ) que contiene solo los elementos que cumplen la condición.
 10. **Describe el paso a paso de cómo crear una rama desde develop si es una funcionalidad nueva.**
 
     Para crear una rama nueva desde consola se utiliza alguno de los comandos para crear ramas como git checkout branch -b, estando parados en la rama develop.
@@ -220,6 +219,6 @@ como clave, mientras que HashTable es sincronizado con varios hilos pero no perm
 
 12. **¿Por qué es recomendable crear ramas feature/ para nuevas funcionalidades en lugar de trabajar en main directamente?**
 Es recomendable crear ramas feature/ para nuevas funcionalidades porque permite aislar los cambios, facilitando la 
-revisión del código y manteniendo la rama principal mas estable. Esto permite probar características de forma individual
+revisión del código y manteniendo la rama principal más estable. Esto permite probar características de forma individual
 y en caso de errores revertir cambios sin afectar el código principal. Además, facilita el trabajo en paralelo entre
 equipos sin tantas interferencias.
