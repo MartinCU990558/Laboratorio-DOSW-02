@@ -1,5 +1,7 @@
+import java.util.List;
+
 public class CarreraParalela {
-    public static void main(String[] args) {
-        System.out.println("Punto de partida para la carrera en paralelo");
+    public static int calcularMaximo(List<Integer> numeros) {
+        return numeros.stream().max(Integer::compareTo).orElseThrow();
     }
 }
