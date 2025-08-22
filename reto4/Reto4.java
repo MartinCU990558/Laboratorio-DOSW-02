@@ -1,3 +1,5 @@
+package reto4;
+
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -48,6 +50,4 @@ public class Reto4 {
             .sorted(Map.Entry.comparingByKey())
             .forEach(e -> System.out.println("Clave: " + e.getKey() + " | Valor: " + e.getValue()));
     }
-
-//
 }
