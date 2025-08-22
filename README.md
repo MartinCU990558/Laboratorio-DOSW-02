@@ -13,6 +13,26 @@
 ## Retos Completados
 
 ### Reto 1: Configuración y creación de rama
+
+### Objetivo
+- Crear un mensaje de bienvenida usando **programación funcional** en Java:
+  - Estructura de datos: `List<Student>`
+  - Operaciones: `stream()`, `map()`, `collect(Collectors.joining())`
+
+### Flujo de ramas
+- **Rama del reto:** `feature/CorreaElizabeth_ContrerasJuan_2025-2`.
+
+### Lo que hicimos
+- **Modelo `Student`**: nombre, correo, edad, semestre (getters simples).
+- **Mensaje `Message.print(List<Student>)`**:
+  - Con `stream().map()` formateamos cada estudiante como  
+    `"<Nombre> estudiante de la escuela de <Semestre> de <Edad> años"`.
+  - Unimos con `Collectors.joining(" y ")` para producir una sola frase.
+  - Repetimos el patrón para los **correos** y los unimos con `" y "`.
+- **Ejecución en `Main`**:
+  - Construimos `List<Student>` con los dos integrantes.
+  - Llamamos `new Message().print(estudiantes)` y mostramos el resultado.
+  
 **Evidencia:**
 ![Captura](imagenes/captura1.png)
 Output obtenido tras correr el programa
@@ -90,3 +110,5 @@ Código: se creó la clase estudiante y la clase mensaje. La clase estudiante ti
 
 - evidencia merges (conflicto/resolución en `registrarAcciones(...)`)  
 ![Captura](imagenes/captura34.png)
+
+
