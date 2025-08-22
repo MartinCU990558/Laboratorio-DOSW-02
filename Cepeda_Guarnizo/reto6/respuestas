@@ -1,0 +1,26 @@
+##Cuestionario
+1. Diferencia entre git merge y git rebase:
+
+git merge: une el historial de dos ramas creando un commit de merge que conserva ambos historiales tal como son. Es más seguro porque mantiene la línea de tiempo completa.
+
+git rebase: re-aplica los commits de tu rama sobre otra, reescribiendo el historial para que parezca lineal (como si hubieran nacido de la rama base directamente). Da un historial más limpio, pero altera los commits.
+
+
+2. Si dos ramas modifican la misma línea de un archivo ¿Qué sucede al hacer merge?
+Se produce un conflicto de merge . Git no puede decidir cuál de los cambios mantener y pide que el desarrollador lo resuelva manualmente editando el archivo, eligiendo o combinando los cambios.
+
+3. ¿Cómo puedes ver gráficamente el historial de merges y ramas en consola?
+Con el comando:
+
+git log --oneline --graph --all
+Esto muestra las ramas, merges y commits en un gráfico de árbol dentro de la terminal.
+
+4. Diferencia entre un commit y un push:
+
+Commit: guarda cambios en tu repositorio local. Es como un checkpoint en tu máquina.
+Push: envía esos commits desde tu repositorio local al repositorio remoto como GitHub o GitLab.
+
+5. ¿Para qué sirve git stash y git pop?
+
+git stash: guarda temporalmente tus cambios no confirmados (tanto en staging como en working directory) y deja el directorio de trabajo limpio, sin perder esos cambios.
+git stash pop: recupera el último stash guardado y lo aplica de nuevo en tu directorio de trabajo, eliminándolo de la lista de stashes.
