@@ -1,6 +1,7 @@
 package Pareja_rodriguez_martinez.reto2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CarreraParalela {
@@ -9,11 +10,12 @@ public class CarreraParalela {
         return listOfIntegers.stream().max(Integer::compare).get();
     }
 
-    public List<Integer> unifyResults(Integer min, Integer max){
-        List<Integer> listOfIntegers = new ArrayList<>();
-        listOfIntegers.add(min);
-        listOfIntegers.add(max);
-        return listOfIntegers;
+    public static Integer calculateMinimum(List<Integer> listOfNumbers){
+        return listOfNumbers.stream().min(Integer::compare).get();
     }
 
+    public static List<Integer> unifyResults(Integer min, Integer max){
+        return new ArrayList<>(Arrays.asList(min, max));
+    }
 }
+
