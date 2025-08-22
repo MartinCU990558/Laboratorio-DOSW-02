@@ -9,31 +9,35 @@
 
 ---
 
-### Reto 1
+## Configuración Repositorio
 **Evidencia:**
-Configuración Correo Eletrónico en Repositorio Local:
+- Configuración Correo Eletrónico en Repositorio Local:
+    
+    ![alt text](img/1.png)
 
-![alt text](img/1.png)
+- Clonar el Repositorio
 
-Clonar el Repositorio
+    ![alt text](img/2.png)
 
-![alt text](img/2.png)
+- Creacion de Rama de Principal
 
-Creacion de Rama de Principal
+    ![alt text](img/3.png)
 
-![alt text](img/3.png)
+- Push
 
-Push
+    ![alt text](img/4.png)
 
-![alt text](img/4.png)
+- Validación de la Estructura Creada
 
-Validación de la Estructura Creada
+    ![alt text](img/5.png)
 
-![alt text](img/5.png)
+## Reto 1
+**Evidencia:**
 
-CODIGO RETO 1
-![alt text](img/Codigo1.png)
+- CODIGO RETO 1
 
-RESULTADO RETO 1
-![alt text](img/Resp1.png)
-![][]
+    ![alt text](img/Codigo1.png)
+
+- RESULTADO RETO 1
+
+    ![alt text](img/Resp1.png)
