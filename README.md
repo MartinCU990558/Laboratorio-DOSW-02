@@ -156,7 +156,24 @@ Recibiera un mensaje, lo repitiera 3 veces con espacios usando StringBuilder y s
 - **Después creamos el método que recibiera el mensaje y lo devolviera en reversa**
 - **Por último creamos un método que usara los 2 métodos para retornar el mensaje 3 veces y en reversa.**
 
-**Evidencia**
+#Solución implementada
+```java
+package reto3;
+
+class Reto3 {
+    public static String invertir(String mensaje) {
+        return new StringBuffer(mensaje).reverse().chars().mapToObj(c -> (char)c).map(String::valueOf).collect(Collectors.joining());
+    }
+
+    public static String repetirTresVeces(String mensaje) {
+        return IntStream.range(0, 3).mapToObj(i -> mensaje).reduce(new StringBuilder(), StringBuilder::append, StringBuilder::append).toString();
+    }
+    public static String repetirEInvertir(String mensaje) {
+        return invertir(repetirTresVeces(mensaje));
+    }
+
+}
+```
 
 ## Reto 4 — El tesoro de las Llaves duplicadas
 
