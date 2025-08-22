@@ -12,7 +12,8 @@
 
 ### Reto 1: Configuración y creación de rama
 **Evidencia:**  
-![Captura](imagenes/reto1.png)  
+![Captura](imagenes/reto1.png)
+![Captura](imagenes/reto1salida.png)  
 En este reto configuramos Git con nuestros nombres y correos, y creamos la rama `feature/QuinteroMaria_OrtegaJuan_2025-2`.  
 
 ---
