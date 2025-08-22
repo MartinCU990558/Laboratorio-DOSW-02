@@ -1,8 +1,10 @@
+package Pareja_Charry_Arenas.reto4;
+
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class TesoroMapasFinal {
+public class Reto4 {
 
     public static Map<String, Integer> buildHashMapFirstWins(List<Map.Entry<String, Integer>> pairs) {
         Map<String, Integer> map = new HashMap<>();
@@ -47,5 +49,20 @@ public class TesoroMapasFinal {
         finalOrdered.forEach((k, v) -> System.out.println("Clave: " + k + " | Valor: " + v));
 
         return finalOrdered;
+    }
+
+    public static void main(String[] args) {
+        List<Map.Entry<String, Integer>> ejemplo = new ArrayList<>();
+        ejemplo.add(new AbstractMap.SimpleEntry<>("a", 1));
+        ejemplo.add(new AbstractMap.SimpleEntry<>("b", 2));
+        ejemplo.add(new AbstractMap.SimpleEntry<>("a", 3));
+
+        Map<String, Integer> hashMap = buildHashMapFirstWins(ejemplo);
+        hashMap.forEach((k, v) -> System.out.println(k + " -> " + v));
+
+        Hashtable<String, Integer> hashTable = buildHashtableFirstWins(ejemplo);
+        hashTable.forEach((k, v) -> System.out.println(k + " -> " + v));
+
+        combinarImprimirFinal(hashMap, hashTable);
     }
 }

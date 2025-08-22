@@ -1,11 +1,13 @@
+package Pareja_Charry_Arenas.reto6;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class MaquinaDecisiones {
+public class Reto6 {
 
     private final Map<String, Runnable> comandos = new HashMap<>();
 
-    public MaquinaDecisiones() {
+    public Reto6() {
         comandos.put("SALUDAR", () -> System.out.println("La máquina dice: ¡Saludos, viajero del tiempo y del código!"));
         comandos.put("DESPEDIR", () -> System.out.println("La máquina dice: Que los bits te acompañen, hasta la próxima misión."));
         comandos.put("CANTAR", () -> System.out.println("La máquina canta: 01010101"));
@@ -35,7 +37,7 @@ public class MaquinaDecisiones {
     }
 
     public static void main(String[] args) {
-        MaquinaDecisiones maquina = new MaquinaDecisiones();
+        Reto6 maquina = new Reto6();
         maquina.ejecutarComando("SALUDAR");
         maquina.ejecutarComando("BROMEAR");
         maquina.ejecutarComando("ANALIZAR");

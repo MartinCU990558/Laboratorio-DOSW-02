@@ -1,3 +1,5 @@
+package Pareja_Charry_Arenas.reto2;
+
 import java.util.List;
 
 class Resultados {
@@ -38,7 +40,7 @@ class Resultados {
     }
 }
 
-public class CarreraParalela {
+public class Reto2  {
 
     private static Resultados calcularResultadosFinales(List<Integer> lista1, List<Integer> lista2) {
         int max1 = lista1.stream().max(Integer::compareTo).orElseThrow();
