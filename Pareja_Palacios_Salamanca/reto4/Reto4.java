@@ -13,7 +13,7 @@ public class Reto4 {
         HashMap<String,Integer> otroMapa = new HashMap<>();
         otroMapa.put("oro", 5);
         otroMapa.put("plata", 3);
-        otroMapa.put("oro", 7);   // se sobreescribe -> queda 7
+        otroMapa.put("oro", 7);
         otroMapa.put("diamante", 10);
         Map<String,Integer> combinado = map(mapa, otroMapa);
         combinado.entrySet()
