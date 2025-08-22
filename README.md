@@ -49,14 +49,14 @@ El ejercicio nos permitió practicar:
  - Resolución de conflictos en un merge.
  - Uso de lambdas y stream() en Java.
 
-## Estudiante A debía crear un método en la rama feature/reto3_builder_Correa_Contreras_2025-2 usando StringBuilder que:
-
+Estudiante A debía crear un método en la rama feature/reto3_builder_Correa_Contreras_2025-2 usando StringBuilder que:
 Reciba un mensaje y lo repita 3 veces concatenado con un espacio
-# Estudiante B debía crear un método en la rama feature/reto3_buffer_Correa_Contreras_2025-2 usando StringBuffer que:
 
+Estudiante B debía crear un método en la rama feature/reto3_buffer_Correa_Contreras_2025-2 usando StringBuffer que:
 Reciba un mensaje  y Lo invierta
+
 Primer choque (Merge Conflict):
-Ambos crearon un método con el mismo nombre, pero con transformaciones diferentes.
+Ambos creamos un método con el mismo nombre, pero con transformaciones diferentes.
 El reto consistía en resolver el conflicto de forma correcta creando un método final que:
 Recibiera un mensaje.
 Lo repitiera 3 veces con espacios usando StringBuilder y stream().
