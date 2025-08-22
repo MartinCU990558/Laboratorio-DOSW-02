@@ -39,6 +39,95 @@ Output obtenido tras correr el programa
 ![Captura](imagenes/captura2.png)
 Código: se creó la clase estudiante y la clase mensaje. La clase estudiante tiene los atributos de nombre, edad, correo y semestre. Se hicieron métodos get de cada atributo. La clase mensaje utiliza el stream, map y collect.
 
+
+# 🏁 Reto #2: Carrera en Paralelo  
+
+En este reto simulamos una carrera de commits donde cada integrante tomó su propio carril de desarrollo (subrama), pero ambos partimos desde la misma línea de salida (la rama `feature/reto2`).  
+
+El objetivo fue **practicar la colaboración en paralelo, resolución de conflictos y uso de expresiones lambda en Java**, mientras íbamos uniendo resultados en un mismo código final.  
+
+---
+
+## 📌 Enunciado  
+
+1. **Estudiante A**  
+   - Cambió el nombre del archivo de `Reto2.java` a `CarreraParalela.java`.  
+   - Subió la estructura base de la clase al feature del reto (`feature/reto_2_CorreaElizabeth_ContrerasJuan_2025-2`).  
+
+2. **Ambos**  
+   - Crearon sus subramas:  
+     - `feature/reto2_carril_uno_CorreaElizabeth_ContrerasJuan_2025-2`  
+     - `feature/reto2_carril_dos_CorreaElizabeth_ContrerasJuan_2025-2`  
+
+3. **Estudiante B (Carril 1)**  
+   - Implementó con **lambda** una función para calcular el **número máximo** de una lista.  
+
+4. **Estudiante A (Carril 2)**  
+   - Implementó con **lambda** una función para calcular el **número mínimo** y obtener la cantidad de datos.  
+
+5. **Primer Choque (Merge Conflict)**  
+   - Ambos crearon una función con el mismo nombre para procesar la lista.  
+   - Se resolvió el conflicto combinando: **mínimo, máximo y cantidad** en un objeto `Resultado`.  
+
+6. **Segunda Vuelta**  
+   - Carril 1 añadió si el número mayor era **múltiplo de 2** (if ternario).  
+   - Carril 2 añadió si el número mayor era **divisor de 2** (if ternario).  
+
+7. **Tercer Choque**  
+   - Carril 1 añadió validación de si la cantidad era **par** (if ternario).  
+   - Carril 2 añadió validación de si la cantidad era **impar** (if ternario).  
+   - Se resolvió el merge integrando ambas verificaciones.  
+
+8. **Gran Meta (Función Final)**  
+   - Se fusionaron todas las funciones en una que recibe **dos listas** y devuelve un objeto `Resultados` con:  
+     - Número mayor por lista  
+     - Número menor por lista  
+     - Cantidad de elementos por lista  
+     - Si el mayor es múltiplo/divisor de 2  
+     - Si la cantidad es par o impar  
+
+9. Se hizo commit final y merge de las ramas carril a `feature/reto_2__CorreaElizabeth_ContrerasJuan_2025-2`.
+
+## ⚙️ Solución Implementada  
+
+package reto2;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class CarreraParalela {
+    public static void main(String[] args) {}
+
+    public static int getMax(List<Integer> l) {
+        return (l.stream().max(Integer::compare).get());
+    }
+
+    private static int amount(List<Integer> l){return (int) l.stream().count();}
+
+}
+
+public static List<Integer> getMinAndAmount(List<Integer> l) {
+    int min = l.stream().min(Integer::compare).get();
+    int count = amount(l);
+    return Arrays.asList(min, count);
+}
+
+public void crash(List<Integer> l) {
+    new Result(getMax(l), getMinAndAmount(l).get(0),getMinAndAmount(l).get(1));
+}
+
+class Result {
+    private int max;
+    private int min;
+    private int count;
+
+    public Result(int max, int min, int count) {
+        this.max = max;
+        this.min = min;
+        this.count = count;
+    }
+}
+
 ## Reto 3 -- El eco misterioso
 
 En este reto trabajamos en equipo para simular el extraño comportamiento de una cueva que devuelve un eco “especial” según cómo se le hable.
@@ -48,7 +137,26 @@ El ejercicio nos permitió practicar:
  - Creación de ramas feature y subramas.
  - Resolución de conflictos en un merge.
  - Uso de lambdas y stream() en Java.
----
+
+Estudiante A debía crear un método en la rama feature/reto3_builder_Correa_Contreras_2025-2 usando StringBuilder que:
+Reciba un mensaje y lo repita 3 veces concatenado con un espacio
+
+Estudiante B debía crear un método en la rama feature/reto3_buffer_Correa_Contreras_2025-2 usando StringBuffer que:
+Reciba un mensaje  y Lo invierta
+
+Primer choque (Merge Conflict):
+Ambos creamos un método con el mismo nombre, pero con transformaciones diferentes.
+
+El reto consistía en resolver el conflicto de forma correcta creando un método final que:
+Recibiera un mensaje, lo repitiera 3 veces con espacios usando StringBuilder y stream(), luego invirtiera el resultado usando StringBuffer, el método debía invocarse con una lambda.
+
+### Lo que hicimos
+
+- **Primero creamos el método que recibiera el mensaje y lo repita 3 veces**
+- **Después creamos el método que recibiera el mensaje y lo devolviera en reversa**
+- **Por último creamos un método que usara los 2 métodos para retornar el mensaje 3 veces y en reversa.**
+
+**Evidencia**
 
 ## Reto 4 — El tesoro de las Llaves duplicadas
 
