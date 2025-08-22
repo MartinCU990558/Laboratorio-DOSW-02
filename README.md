@@ -34,9 +34,10 @@
   - Llamamos `new Message().print(estudiantes)` y mostramos el resultado.
   
 **Evidencia:**
-![Captura](imagenes/captura1.png)
+
 Output obtenido tras correr el programa
 ![Captura](imagenes/captura2.png)
+
 Código: se creó la clase estudiante y la clase mensaje. La clase estudiante tiene los atributos de nombre, edad, correo y semestre. Se hicieron métodos get de cada atributo. La clase mensaje utiliza el stream, map y collect.
 
 
@@ -174,6 +175,11 @@ class Reto3 {
 
 }
 ```
+**Evidencia:**
+Main llamando al método repetirEInvertir
+![Captura](imagenes/captura50.png)
+Output
+![Captura](imagenes/captura51.png)
 
 ## Reto 4 — El tesoro de las Llaves duplicadas
 
