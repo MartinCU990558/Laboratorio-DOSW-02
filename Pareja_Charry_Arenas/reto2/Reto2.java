@@ -19,8 +19,12 @@ public class CarreraParalela {
         String esMultiploDeDos = (maximo % 2 == 0) ? "Sí es múltiplo de 2" : "No es múltiplo de 2";
         String esDivisorDeDos = (2 % maximo == 0) ? "Es divisor de 2" : "No es divisor de 2";
 
+        int cantidad = numeros.size();
+        String esPar = (cantidad % 2 == 0) ? "La cantidad es par" : "La cantidad no es par";
+
         System.out.println("Máximo: " + maximo + " → " + esMultiploDeDos + " y " + esDivisorDeDos);
         System.out.println(minimoYCantidad);
+        System.out.println(esPar);
     }
 
     public static void main(String[] args) {
