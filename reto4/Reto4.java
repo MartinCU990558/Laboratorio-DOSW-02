@@ -42,13 +42,6 @@ public class Reto4 {
         return merged;
     }
 
-    public static void imprimirClavesMayusculas(Map<String, Integer> mapa) {
-        mapa.entrySet().stream()
-            .map(e -> Map.entry(e.getKey().toUpperCase(), e.getValue()))
-            .sorted(Map.Entry.comparingByKey())
-            .forEach(e -> System.out.println("Clave: " + e.getKey() + " | Valor: " + e.getValue()));
-    }
-
     public static void imprimirOrdenadoPorClave(Map<String, Integer> mapa) {
         mapa.entrySet().stream().sorted(Map.Entry.comparingByKey())
         .forEach(e -> System.out.println("Clave: " + e.getKey() + " | Valor: " + e.getValue()));
