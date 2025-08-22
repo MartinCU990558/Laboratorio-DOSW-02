@@ -35,4 +35,14 @@ public class Reto4 {
         pairs.forEach(p -> map.putIfAbsent(p.getKey(), p.getValue()));
         return map;
     }
+
+    public static Map<String, Integer> combinarMapas(HashMap<String, Integer> mapaRapido, Hashtable<String, Integer> mapaBlindado) {
+        Map<String, Integer> merged = new HashMap<>(mapaRapido);
+        mapaBlindado.forEach((clave, valor) -> merged.put(clave, valor));
+
+        return merged;
+    }
+
 }
+
+//
