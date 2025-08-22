@@ -1,5 +1,4 @@
 package Quintero_Ortega.reto2;
-
 import java.util.List;
 import java.util.NoSuchElementException;
  
