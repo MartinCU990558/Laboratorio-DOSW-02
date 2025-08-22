@@ -22,13 +22,4 @@ public class Reto4 {
                         HashMap::new
                 ));
     }
-    public static HashMap<String,Integer> saveInHashMap(List<Object[]> listToSave){
-        return listToSave.stream()
-                .collect(Collectors.toMap(
-                        arr -> (String) arr[0],
-                        arr -> (Integer) arr[1],
-                        (v1, v2) -> v1,
-                        HashMap::new
-                ));
-    }
 }
