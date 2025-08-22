@@ -91,3 +91,22 @@
 - Resultado implementación después de solucionar conflictos de merge
 
   ![Evidencia Paso Correspondiente](img/15.png)
+
+## Reto 4
+**Evidencia:**
+
+- Implementación inicial en sus ramas correspondientes
+
+  ![Evidencia Paso Correspondiente](img/16.png)
+  ![Evidencia Paso Correspondiente](img/17.png)
+
+- Implementación actualizada según instrucciones dadas
+
+  ![Evidencia Paso Correspondiente](img/18.png)
+  ![Evidencia Paso Correspondiente](img/19.png)
+
+- Implementación completa después de merge
+
+  ![Evidencia Paso Correspondiente](img/20.png)
+
+
