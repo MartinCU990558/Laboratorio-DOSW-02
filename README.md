@@ -27,10 +27,10 @@ Realizamos un commit colaborativo en la misma rama, verificando el log para aseg
 
 ---
 
-### Reto 3: (nombre del reto)
+### Reto 3: (El eco misterioso)
 **Evidencia:**  
 ![Captura](./Quintero_Ortega/imagenes/reto3.png)  
-Descripción breve de lo que hicieron.  
+El reto consistía en implementar un método usando StringBuilder y StringBuffer para construir mensajes con ecos. 
 
 ---
 
