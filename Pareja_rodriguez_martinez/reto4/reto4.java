@@ -16,8 +16,7 @@ public class Reto4 {
                         HashMap::new
                 ));
     }
-
-    public static Map<String,Integer> unifyMaps(HashMap<String,Integer> hashMapToUnify,Hashtable<String,Integer> hashTableToUnify){
+    public static Map<String,Integer> unifyMaps(HashMap<String,Integer> hashMapToUnify, Hashtable<String,Integer> hashTableToUnify){
         return Stream.concat(hashMapToUnify.entrySet().stream(), hashTableToUnify.entrySet().stream()).
                 collect(Collectors.toMap(
                         Map.Entry::getKey,
@@ -25,5 +24,13 @@ public class Reto4 {
                         (v1, v2) -> v2,
                         HashMap::new
                 ));
+    }
+
+    public static Hashtable<String, Integer> createHashTable(List<AbstractMap.SimpleEntry<String, Integer>> lista) {
+        Hashtable<String, Integer> tabla = new Hashtable<>();
+
+        lista.stream().forEach(par -> tabla.putIfAbsent(par.getKey(), par.getValue()));
+
+        return tabla;
     }
 }
