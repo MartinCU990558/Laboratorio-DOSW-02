@@ -38,6 +38,7 @@ public class Reto4 {
             resultado.put(key, table.get(key));
             if (mapa.keySet().contains(key)){
                 mapa.remove(key);
+
             }
         }
         for (String key : mapa.keySet()) {
