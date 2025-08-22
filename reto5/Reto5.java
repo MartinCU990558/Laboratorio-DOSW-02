@@ -5,7 +5,7 @@ import java.util.stream.*;
 
 
 public class Reto5 {
-    public static Set<Integer> almacenarNumeros2() {
+    public static Set<Integer> almacenarA() {
         HashSet<Integer> numeros = new HashSet<>();
         Random rand = new Random();
         for (int i = 0; i < 20; i++) {
