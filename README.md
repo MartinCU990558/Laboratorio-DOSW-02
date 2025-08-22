@@ -15,7 +15,7 @@
 ![Captura](./Quintero_Ortega/imagenes/reto1.png)  
 ![Captura](./Quintero_Ortega/imagenes/reto1salida.png)  
 
-En este reto hicimos uso de las facilidades que brinda los stream() para poder imprimir un mensaje de bienvenida.
+En este reto hicimos uso de las facilidades que brinda los stream() para poder imprimir un mensaje de bienvenida predeterminado.
 
 
 ---
@@ -98,7 +98,7 @@ Descripción breve de lo que hicieron.
 **Pregunta 7. Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional para llenar un mapa?**
 
 	Es más fácil de leer y escribir, aprovecha a los streams y hace el trabajo más facil ya que usa varios núcleos del procesador al tiempo.
-	
+
 **Pregunta 8. Si usas List con objetos y luego aplicas stream().map() que tipo de operación estas haciendo?**
 
 	Una operación de transformación. Convierte cada elemento del stream en otro valor (puede ser del mismo tipo o distinto). Retorna un nuevo Stream con los elementos transformados.
@@ -125,15 +125,15 @@ Descripción breve de lo que hicieron.
 
 **Pregunta 11. ¿Cuál es la diferencia entre crear una rama con git branch y con git checkout -b?**
 
-git branch <rama>: solo crea la rama. Te quedas en la rama actual.
-git checkout -b <rama>: crea y cambia a la nueva rama en un solo paso.
+	git branch <rama>: solo crea la rama. Te quedas en la rama actual.
+	git checkout -b <rama>: crea y cambia a la nueva rama en un solo paso.
 
 **Pregunta 12. ¿Por qué es recomendable crear ramas feature/ para nuevas funcionalidades en lugar de trabajar en main directamente?**
 
--Aislamiento: los cambios no rompen el código estable.
--Revisión por PR: código revisado antes de integrar.
--CI segura: pruebas corren en la rama antes de tocar main.
--Historial limpio: commits agrupados por feature.
--Reversión fácil: si algo falla, se revierte la rama o el merge.
--Trabajo en paralelo: varios features sin bloqueos.
--Políticas: proteges main con reglas de branch y evitas pushes accidentales.
+	-Aislamiento: los cambios no rompen el código estable.
+	-Revisión por PR: código revisado antes de integrar.
+	-CI segura: pruebas corren en la rama antes de tocar main.
+	-Historial limpio: commits agrupados por feature.
+	-Reversión fácil: si algo falla, se revierte la rama o el merge.
+	-Trabajo en paralelo: varios features sin bloqueos.
+	-Políticas: proteges main con reglas de branch y evitas pushes accidentales.
