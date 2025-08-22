@@ -24,4 +24,12 @@ public class Reto5 {
         filtrados.forEach(n -> System.out.print(n + " "));
     }
 
+    public static void crash(Set<Integer> setA, Set<Integer> setB){
+        TreeSet<Integer> union = new TreeSet<>();
+        union.addAll(setA);
+        union.addAll(setB);
+        System.out.println("Resultado: ");
+        union.forEach(n -> System.out.print(n + " "));
+    }
+
 }
