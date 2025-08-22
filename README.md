@@ -34,9 +34,10 @@
   - Llamamos `new Message().print(estudiantes)` y mostramos el resultado.
   
 **Evidencia:**
-![Captura](imagenes/captura1.png)
+
 Output obtenido tras correr el programa
 ![Captura](imagenes/captura2.png)
+
 Código: se creó la clase estudiante y la clase mensaje. La clase estudiante tiene los atributos de nombre, edad, correo y semestre. Se hicieron métodos get de cada atributo. La clase mensaje utiliza el stream, map y collect.
 
 
@@ -90,13 +91,13 @@ El objetivo fue **practicar la colaboración en paralelo, resolución de conflic
 
 ## ⚙️ Solución Implementada  
 ```java
-package reto2;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class CarreraParalela {
-    public static void main(String[] args) {}
+public class Main {
+    public static void main(String[] args) {
+    }
 
     public static int getMax(List<Integer> l) {
         return (l.stream().max(Integer::compare).get());
@@ -104,16 +105,16 @@ public class CarreraParalela {
 
     private static int amount(List<Integer> l){return (int) l.stream().count();}
 
-}
+    public static List<Integer> getMinAndAmount(List<Integer> l) {
+        int min = l.stream().min(Integer::compare).get();
+        int count = amount(l);
+        return Arrays.asList(min, count);
+    }
 
-public static List<Integer> getMinAndAmount(List<Integer> l) {
-    int min = l.stream().min(Integer::compare).get();
-    int count = amount(l);
-    return Arrays.asList(min, count);
-}
+    public static void crash(List<Integer> l) {
+        new Result(getMax(l), getMinAndAmount(l).get(0),getMinAndAmount(l).get(1));
+    }
 
-public void crash(List<Integer> l) {
-    new Result(getMax(l), getMinAndAmount(l).get(0),getMinAndAmount(l).get(1));
 }
 
 class Result {
@@ -174,6 +175,18 @@ class Reto3 {
 
 }
 ```
+**Evidencia:**
+Main llamando al método repetirEInvertir
+
+
+![Captura](imagenes/captura50.png)
+
+
+Output
+
+
+![Captura](imagenes/captura51.png)
+
 
 ## Reto 4 — El tesoro de las Llaves duplicadas
 
