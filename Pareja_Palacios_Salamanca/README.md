@@ -43,7 +43,7 @@
     ![Evidencia Paso Correspondiente](img/Resp1.png)
 
 ## Reto 2
-**Evidencia**
+**Evidencia:**
 
 ### Primer Choque
 
@@ -69,7 +69,7 @@
 
   ![Evidencia Paso Correspondiente](img/10.png)
 
-- Resultado implementación
+- Resultado Implementación
 
   ![Evidencia Paso Correspondiente](img/11.png)
 
@@ -80,3 +80,14 @@
   ![Evidencia Paso Correspondiente](img/12.png)
 
   ![Evidencia Paso Correspondiente](img/13.png)
+
+## Reto 3
+**Evidencia:**
+
+- Implementación Inicial
+
+  ![Evidencia Paso Correspondiente](img/14.png)
+
+- Resultado implementación después de solucionar conflictos de merge
+
+  ![Evidencia Paso Correspondiente](img/15.png)
