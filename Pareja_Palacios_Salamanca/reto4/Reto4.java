@@ -11,6 +11,7 @@ public class Reto4 {
     public static void map(String clave, Integer valor){
         if(mapa.containsKey(clave)){
             mapa.put(clave, valor);
+
         }
     }
 }
