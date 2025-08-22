@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.Hashtable;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Reto4 {
 
@@ -8,21 +10,25 @@ public class Reto4 {
     public static void main(String[] args) {
         HashMap<String, Integer> mapa = createHashMap();
 
-        Hashtable<String, Integer> table = new Hashtable<>();
-        table.put("plata", 8);
-        table.put("rubí", 4);
-        table.put("oro", 12);
-        table.put("esmeralda", 6);
+        Hashtable<String, Integer> table = createHashTable()
 
         unificar(table, mapa);
     }
 
     public static HashMap<String,Integer> createHashMap(){
         HashMap<String, Integer> mapa = new HashMap<>();
-        mapa.put("oro", 5);
-        mapa.put("plata", 3);
-        mapa.put("diamante", 10);
+        mapa.putIfAbsent("oro", 5);
+        mapa.putIfAbsent("plata", 3);
+        mapa.putIfAbsent("diamante", 10);
         return mapa;
+    }
+    public static Hashtable<String, Integer> createHashTable(){
+        Hashtable<String, Integer> table = new Hashtable<>()
+        table.put("plata", 8);
+        table.put("rubí", 4);
+        table.put("oro", 12);
+        table.put("esmeralda", 6);
+        return table ;
     }
 
     public static void unificar(Hashtable<String, Integer> table, HashMap<String, Integer> mapa){
