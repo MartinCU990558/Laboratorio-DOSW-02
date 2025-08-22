@@ -246,7 +246,7 @@ Este reto nos permitió practicar:
 
 ---
 
-## ⚙️ Solución Implementada  
+##  Solución Implementada  
 
 ```java
 package reto5;
