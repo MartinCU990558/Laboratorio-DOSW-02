@@ -101,3 +101,31 @@ los runnables para verificar que funcionaba de manera correcta sin añadir mas l
 adicional fuera del bucle para terminar de verificar que todo funcionaba correctamente.
 ![img.png](img.png)
 ## Preguntas teóricas
+
+7. Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional para llenar un mapa?
+   Más conciso y expresivo
+   Menos propenso a errores
+   Mejor legibilidad del código
+   Funcional consiso y limpio
+   Inmutabilidad
+   es más conciso, expresivo, funcional y menos propenso a errores que un bucle tradicional, además de ofrecer mejor legibilidad del código.
+8. Si usas List con objetos y luego aplicas stream().map() que tipo de operación estas haciendo?
+   Es un proceso de transformación que se sitúa a medio camino. Toma cada ítem de la lista, utiliza una función (mapper) y produce un nuevo flujo con los ítems modificados.
+9. Que hace el método stream().filter() y que retorna?
+   Filtra elementos del stream basado en una condición,Retorna un nuevo stream(entrada/salida ) que contiene solo los elementos que cumplen la condición.
+10. Describe el paso a paso de cómo crear una rama desde develop si es una funcionalidad nueva.
+    Primero se va a la rama principal y se selecciona “new Branch from..” se reescribe el nombre y se le da a créate para crear la nueva rama como se uso en el laboratorio.
+11. ¿Cuál es la diferencia entre crear una rama con git branch y con git checkout -b?
+    git branch nombre-rama:
+    Solo crea la rama
+    No cambia a la rama creada
+    Debes hacer git checkout nombre-rama después
+    git checkout -b nombre-rama:
+    Crea la rama Y cambia a ella inmediatamente
+    git branch solo crea la rama pero no cambia dentro de ella, mientras que git checkout -b crea la rama y inmediatamente te posiciona en ella.
+12. ¿Por qué es recomendable crear ramas feature/ para nuevas funcionalidades en lugar de trabajar en main directamente?
+    Aislamiento: Cada función se crea de manera separada
+    Revisión de código: Solicitudes de extracción más precisas y claras
+    Rama estable: La rama principal se mantiene constantemente en buen estado
+    Pruebas: Se pueden evaluar características de forma individual
+    Reversión sencilla: Si algo falla, es posible eliminar la rama sin perjudicar la principal
