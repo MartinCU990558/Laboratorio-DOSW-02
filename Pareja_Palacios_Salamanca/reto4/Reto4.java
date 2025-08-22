@@ -1,9 +1,9 @@
-import java.util.HashMap;
+import java.util.Hashtable;
 
 public class Reto4 {
-    public static HashMap<String,Integer> mapa;
+    public static Hashtable<String,Integer> mapa;
     public static void main(String[] args) {
-        mapa  = new HashMap<>();
+        mapa  = new Hashtable<>();
         map("a",1);
 
     }
