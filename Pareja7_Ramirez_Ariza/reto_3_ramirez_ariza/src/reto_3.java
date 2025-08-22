@@ -1,15 +1,26 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class reto_3 {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.stream.IntStream;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+public class reto_3 {
+    public static String repeatMessage(String message) {
+        return IntStream.range(0, 3).mapToObj(i -> message)
+                .collect(StringBuilder::new,
+                        (sb, s) -> {
+                            if (!sb.isEmpty()) sb.append(" ");
+                            sb.append(s);
+                        },StringBuilder::append).toString();
     }
+    public static String reverseMessage(String message) {
+        StringBuffer buffer = new StringBuffer(message);
+        return buffer.reverse().toString();
+    }
+    public static String repeatAndReverse(String message) {
+        return reverseMessage(repeatMessage(message));
+    }
+
+    public static void main(String[] args) {
+        System.out.println(repeatMessage("Hello"));
+        System.out.println(reverseMessage("Hello"));
+        System.out.println(repeatAndReverse("Hello"));
+    }
+
 }
