@@ -72,3 +72,11 @@
 - Resultado implementación
 
   ![Evidencia Paso Correspondiente](img/11.png)
+
+### Tercer Choque e Implementación Final
+
+- Resultado Implementación Final - Junto al Log
+
+  ![Evidencia Paso Correspondiente](img/12.png)
+
+  ![Evidencia Paso Correspondiente](img/13.png)
