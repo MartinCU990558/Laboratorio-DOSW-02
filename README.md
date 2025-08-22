@@ -366,14 +366,45 @@ Esto genera un **conflicto de merge**.
 - El conflicto debe resolverse manualmente editando el archivo.  
 - Git marcará las partes en conflicto con `<<<<<<<`, `=======` y `>>>>>>>`.  
 
-#3: Ver el historial de merges y ramas en consola
+## 3. Ver el historial de merges y ramas en consola
 
 Para visualizar de forma gráfica el historial de **commits, merges y ramas** directamente desde la consola, se puede usar el comando:
 
 ```bash
 git log --oneline --graph --all --decorate
 ```
-  
+# 📘 Respuestas sobre Git y Java
+
+## 4. Explica la diferencia entre un **commit** y un **push**
+Un **commit** guarda los cambios en el repositorio **local**, es decir, en tu computadora.  
+Un **push** envía esos cambios al repositorio **remoto** (por ejemplo, GitHub), para que otros puedan verlos y usarlos.  
+
+👉 En resumen:  
+- **Commit** = guardar cambios localmente.  
+- **Push** = subir cambios al servidor remoto.  
+
+---
+
+## 5. ¿Para qué sirve `git stash` y `git pop`?
+- **git stash**: Guarda temporalmente los cambios que no has confirmado (commits) para que puedas cambiar de rama o hacer otra acción sin perder tu trabajo.  
+- **git stash pop**: Recupera esos cambios guardados y los aplica nuevamente a tu área de trabajo.  
+ 
+1. Estás trabajando en algo pero necesitas cambiar de rama.  
+2. Haces `git stash` para guardar tus cambios sin comprometerlos.  
+3. Cambias de rama, vuelves a la anterior, y usas `git stash pop` para recuperar lo que estabas haciendo.  
+
+---
+
+## 6. ¿Qué diferencia hay entre **HashMap** y **HashTable**?
+- **HashMap**:
+  - No es sincronizado → más rápido en entornos de un solo hilo.  
+  - Permite **un null** como clave y múltiples valores null.  
+  - Introducido en Java 1.2.  
+
+- **HashTable**:
+  - Es sincronizado → más seguro en entornos multihilo, pero más lento.  
+  - No permite claves null ni valores null.  
+  - Es más antiguo (Java 1.0).  
 
 7. **¿Qué ventajas tiene `Collectors.toMap()` frente a un bucle tradicional para llenar un mapa?**  
    - Más **declarativo y conciso** que `for` + `put`.  
