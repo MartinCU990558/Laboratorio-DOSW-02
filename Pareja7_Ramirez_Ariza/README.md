@@ -23,4 +23,4 @@ atravez de mensajes y organizar la informacion para imprimirlo correctamente dan
 Reto 2 subido en la segunda rama
 Iffantural(imanenec /ratn) lnn nnal
 
-## Preguntas teóricas 
+## Preguntas teóricas
