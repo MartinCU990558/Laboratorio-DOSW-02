@@ -45,20 +45,6 @@ public class reto_4 {
         return result;
     }
 
-    public static Map<String, Integer> combineAndTransform( Map<String, Integer> hashMap,Hashtable<String, Integer> hashTable) {
-        return Stream.concat(hashMap.entrySet().stream(), hashTable.entrySet().stream())
-                .map(entry -> Map.entry(entry.getKey().toUpperCase(), entry.getValue()))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,(hashMapValue, hashTableValue) -> hashTableValue, LinkedHashMap::new
-                )).entrySet().stream()
-                .sorted(Map.Entry.comparingByKey())
-                .collect(Collectors.toMap(
-                        Map.Entry::getKey,
-                        Map.Entry::getValue,
-                        (v1, v2) -> v1,
-                        LinkedHashMap::new
-                ));
-    }
-
     public static Map<String, Integer> finalFeature(List<SimpleEntry<String, Integer>> listMap, List<SimpleEntry<String, Integer>> listTable) {
         HashMap<String, Integer> hashMap = storeUniqueKeysMap(listMap);
         Hashtable<String, Integer> hashTable = storeUniqueKeysTable(listTable);
