@@ -62,7 +62,6 @@ Recibiera un mensaje.
 Lo repitiera 3 veces con espacios usando StringBuilder y stream().
 Luego invirtiera el resultado usando StringBuffer.
 El método debía invocarse con una lambda.
----
 
 ## Reto 4 — El tesoro de las Llaves duplicadas
 
