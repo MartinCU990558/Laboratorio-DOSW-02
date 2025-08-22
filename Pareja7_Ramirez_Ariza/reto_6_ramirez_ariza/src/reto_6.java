@@ -14,6 +14,18 @@ public class reto_6 {
             case "DANZAR":
                 System.out.println("Girando en modo fiesta.");
                 break;
+            case "BROMEAR":
+                System.out.println("La máquina ríe: ¿Por qué la RAM rompió con la CPU? Porque necesitaba espacio...");
+                break;
+            case "GRITAR":
+                System.out.println("La máquina grita: ¡¡¡ALERTA DE STACK OVERFLOW!!!");
+                break;
+            case "SUSURRAR":
+                System.out.println("La máquina susurra: Shhh... los bugs están dormidos.");
+                break;
+            case "ANALIZAR":
+                System.out.println("La máquina procesa: Analizando datos... resultado: ¡Eres increíble programando!");
+                break;
         }
     }
 
@@ -23,5 +35,9 @@ public class reto_6 {
         act("CANTAR");
         act("DESPEDIR");
         act("HACER CAFÉ");
+        act("BROMEAR");
+        act("GRITAR");
+        act("SUSURRAR");
+        act("ANALIZAR");
     }
 }
