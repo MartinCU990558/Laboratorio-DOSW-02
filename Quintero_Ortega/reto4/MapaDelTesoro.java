@@ -9,7 +9,14 @@ import java.util.stream.Stream;
 public class MapaDelTesoro {
 
     public static HashMap<String,Integer> construirHashMap(List<Map.Entry<String,Integer>> pares) {
-        return new HashMap<>();
+        return pares.stream().collect(
+                Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (primero, ignorado) -> primero,
+                        HashMap::new
+                )
+        );
     }
 
     public static Hashtable<String,Integer> construirHashtable(List<Map.Entry<String,Integer>> pares) {
@@ -24,13 +31,19 @@ public class MapaDelTesoro {
     }
 
     public static Map<String,Integer> combinarMapas(Map<String,Integer> hashMap, Map<String,Integer> hashTable) {
-        Map<String,Integer> res = new HashMap<>(hashMap);
-        hashTable.forEach(res::put);
-        return res;
+        return Stream.concat(hashMap.entrySet().stream(), hashTable.entrySet().stream())
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (v1, v2) -> v2,
+                        HashMap::new
+                ));
     }
 
     public static void imprimirMayus(Map<String,Integer> mapa) {
-        mapa.forEach((k,v) -> System.out.printf("Clave: %s | Valor: %d%n", k, v));
+        mapa.entrySet().stream()
+                .map(e -> new AbstractMap.SimpleEntry<>(e.getKey().toUpperCase(java.util.Locale.ROOT), e.getValue()))
+                .forEach(e -> System.out.printf("Clave: %s | Valor: %d%n", e.getKey(), e.getValue()));
     }
 
     public static void imprimirOrdenado(Map<String,Integer> mapa) {
@@ -65,6 +78,7 @@ public class MapaDelTesoro {
         Map<String,Integer> m1 = buildHash.apply((List<Map.Entry<String, Integer>>) (List<?>) listaHash);
         Map<String,Integer> m2 = buildTable.apply((List<Map.Entry<String, Integer>>) (List<?>) listaTable);
         Map<String,Integer> combinado = combinarMapas(m1, m2);
+        imprimirMayus(combinado);
         imprimirOrdenado(combinado);
     }
 }
