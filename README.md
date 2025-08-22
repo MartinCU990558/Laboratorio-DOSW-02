@@ -34,10 +34,10 @@ El reto consistía en implementar un método usando StringBuilder y StringBuffer
 
 ---
 
-### Reto 4: (nombre del reto)
+### Reto 4: (El tesoro de las llaves duplicadas)
 **Evidencia:**  
 ![Captura](./Quintero_Ortega/imagenes/reto4.png)  
-Descripción breve de lo que hicieron.  
+Había que guardar pares clave-valor en un HashMap (rápido pero sin protección) y en un Hashtable (más lento pero seguro). Luego, juntar ambos mapas en uno solo, dando prioridad al Hashtable en caso de conflicto.
 
 ---
 
