@@ -3,7 +3,7 @@ package reto5;
 import java.util.*;
 import java.util.stream.*;
 
-public class EstudianteB {
+public class Reto5 {
 
     public static void almacenarNumeros() {
         TreeSet<Integer> numeros = new TreeSet<>();
