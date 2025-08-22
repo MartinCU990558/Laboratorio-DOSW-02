@@ -57,11 +57,9 @@ Reciba un mensaje  y Lo invierta
 
 Primer choque (Merge Conflict):
 Ambos creamos un método con el mismo nombre, pero con transformaciones diferentes.
+
 El reto consistía en resolver el conflicto de forma correcta creando un método final que:
-Recibiera un mensaje.
-Lo repitiera 3 veces con espacios usando StringBuilder y stream().
-Luego invirtiera el resultado usando StringBuffer.
-El método debía invocarse con una lambda.
+Recibiera un mensaje, lo repitiera 3 veces con espacios usando StringBuilder y stream(), luego invirtiera el resultado usando StringBuffer, el método debía invocarse con una lambda.
 
 ## Reto 4 — El tesoro de las Llaves duplicadas
 
