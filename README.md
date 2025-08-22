@@ -39,6 +39,73 @@ Output obtenido tras correr el programa
 ![Captura](imagenes/captura2.png)
 Código: se creó la clase estudiante y la clase mensaje. La clase estudiante tiene los atributos de nombre, edad, correo y semestre. Se hicieron métodos get de cada atributo. La clase mensaje utiliza el stream, map y collect.
 
+
+🏁 Reto #2: Carrera en Paralelo
+
+En este reto simulamos una carrera de commits donde cada integrante tomó su propio carril de desarrollo (subrama), pero ambos partimos desde la misma línea de salida (la rama feature/reto2).
+
+El objetivo fue practicar la colaboración en paralelo, resolución de conflictos y uso de expresiones lambda en Java, mientras íbamos uniendo resultados en un mismo código final.
+
+📌 Enunciado
+
+Estudiante A
+
+Cambió el nombre del archivo de Reto2.java a CarreraParalela.java.
+
+Subió la estructura base de la clase al feature del reto (feature/reto2).
+
+Ambos
+
+Crearon sus subramas:
+
+feature/reto2_carril_uno
+
+feature/reto2_carril_dos
+
+Estudiante B (Carril 1)
+
+Implementó con lambda una función para calcular el número máximo de una lista.
+
+Estudiante A (Carril 2)
+
+Implementó con lambda una función para calcular el número mínimo y obtener la cantidad de datos.
+
+Primer Choque (Merge Conflict)
+
+Ambos crearon una función con el mismo nombre para procesar la lista.
+
+Se resolvió el conflicto combinando: mínimo, máximo y cantidad en un objeto Resultado.
+
+Segunda Vuelta
+
+Carril 1 añadió si el número mayor era múltiplo de 2 (if ternario).
+
+Carril 2 añadió si el número mayor era divisor de 2 (if ternario).
+
+Tercer Choque
+
+Carril 1 añadió validación de si la cantidad era par (if ternario).
+
+Carril 2 añadió validación de si la cantidad era impar (if ternario).
+
+Se resolvió el merge integrando ambas verificaciones.
+
+Gran Meta (Función Final)
+
+Se fusionaron todas las funciones en una que recibe dos listas y devuelve un objeto Resultados con:
+
+Número mayor por lista
+
+Número menor por lista
+
+Cantidad de elementos por lista
+
+Si el mayor es múltiplo/divisor de 2
+
+Si la cantidad es par o impar
+
+Se hizo commit final y merge de las ramas carril a feature/reto2.
+
 ## Reto 3 -- El eco misterioso
 
 En este reto trabajamos en equipo para simular el extraño comportamiento de una cueva que devuelve un eco “especial” según cómo se le hable.
