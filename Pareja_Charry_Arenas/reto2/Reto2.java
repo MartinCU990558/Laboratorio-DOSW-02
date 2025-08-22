@@ -21,10 +21,12 @@ public class CarreraParalela {
 
         int cantidad = numeros.size();
         String esPar = (cantidad % 2 == 0) ? "La cantidad es par" : "La cantidad no es par";
+        String esImpar = (cantidad % 2 != 0) ? "La cantidad es impar" : "La cantidad no es impar";
 
         System.out.println("Máximo: " + maximo + " → " + esMultiploDeDos + " y " + esDivisorDeDos);
         System.out.println(minimoYCantidad);
         System.out.println(esPar);
+        System.out.println(esImpar);
     }
 
     public static void main(String[] args) {
