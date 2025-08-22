@@ -61,6 +61,10 @@ Ambos creamos un método con el mismo nombre, pero con transformaciones diferent
 El reto consistía en resolver el conflicto de forma correcta creando un método final que:
 Recibiera un mensaje, lo repitiera 3 veces con espacios usando StringBuilder y stream(), luego invirtiera el resultado usando StringBuffer, el método debía invocarse con una lambda.
 
+### Lo que hicimos
+
+- **Primero creamos el método que recibiera el mensaje y lo repita 3 veces**
+
 ## Reto 4 — El tesoro de las Llaves duplicadas
 
 ### Objetivo
