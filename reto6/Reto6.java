@@ -1,10 +1,12 @@
-package reto6;
+package reto6;  
 import java.util.*;
 
 public class Reto6 {
-    private static final Map<String, Runnable> ACCIONES = new HashMap<>();
 
-    public static void registrarAcciones(Map<String, Runnable> acciones) {
+    private static final Map<String, Runnable> acciones = new HashMap<>();
+
+    public static void registrarAccionesUnificadas() {
+
         acciones.put("SALUDAR", () ->
             System.out.println("La máquina dice: ¡Saludos, viajero del tiempo y del código!"));
         acciones.put("DESPEDIR", () ->
@@ -24,8 +26,12 @@ public class Reto6 {
     }
 
     public static void ejecutarComando(String comando) {
-        if (comando == null) { System.out.println("Comando inválido (null)."); return; }
+        if (comando == null) {
+            System.out.println("Comando inválido (null).");
+            return;
+        }
         String cmd = comando.trim().toUpperCase();
+
         switch (cmd) {
             case "SALUDAR":
             case "DESPEDIR":
@@ -35,12 +41,23 @@ public class Reto6 {
             case "GRITAR":
             case "SUSURRAR":
             case "ANALIZAR":
-                Runnable r = ACCIONES.get(cmd);
-                if (r != null) r.run();
-                else System.out.println("Acción no registrada para: " + cmd);
+                Runnable r = acciones.get(cmd);
+                if (r != null) {
+                    r.run();
+                } else {
+                    System.out.println("Acción no registrada para: " + cmd);
+                }
                 break;
             default:
                 System.out.println("Comando no reconocido: " + cmd);
         }
+    }
+
+    public static void main(String[] args) {
+        registrarAccionesUnificadas();
+        ejecutarComando("SALUDAR");
+        ejecutarComando("BROMEAR");
+        ejecutarComando("ANALIZAR");
+        ejecutarComando("DANZAR");
     }
 }
