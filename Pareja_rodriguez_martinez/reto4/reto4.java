@@ -31,4 +31,15 @@ public class Reto4 {
                         HashMap::new
                 ));
     }
+
+    public static Map<String, Integer> sortHashTable(Hashtable<String, Integer> tabla) {
+        return tabla.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (v1, v2) -> v1,
+                        LinkedHashMap::new
+                ));
+    }
 }
