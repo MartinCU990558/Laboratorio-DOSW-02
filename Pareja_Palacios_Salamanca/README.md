@@ -168,3 +168,4 @@
 
    Esto es recomendable debido a que permite primero una mejor organización dentro de ambiente de trabajo y por otra parte permite una mayor facilidad para experimentar con nuevas funcionalidades sin afectar el funcionamiento de la rama principal la cual se espera que sea la mas estable
 
+.
