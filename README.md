@@ -64,6 +64,10 @@ Recibiera un mensaje, lo repitiera 3 veces con espacios usando StringBuilder y s
 ### Lo que hicimos
 
 - **Primero creamos el método que recibiera el mensaje y lo repita 3 veces**
+- **Después creamos el método que recibiera el mensaje y lo devolviera en reversa**
+- **Por último creamos un método que usara los 2 métodos para retornar el mensaje 3 veces y en reversa.**
+
+**Evidencia**
 
 ## Reto 4 — El tesoro de las Llaves duplicadas
 
