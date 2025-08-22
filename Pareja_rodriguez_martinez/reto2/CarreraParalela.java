@@ -13,5 +13,17 @@ public class CarreraParalela {
     public static List<Integer> unifyResults(Integer min, Integer max){
         return new ArrayList<>(Arrays.asList(min, max));
     }
+
+    public static boolean itsDivisor(Integer maxNum){
+        return 2 % maxNum  == 0  ? true:false;
+    }
+
+    public static boolean itsOdd(List<Integer> listOfNumbers){
+        return listOfNumbers.stream.count() % 2 != 0 ? true:false;
+    }
+
+
+
+
 }
 
