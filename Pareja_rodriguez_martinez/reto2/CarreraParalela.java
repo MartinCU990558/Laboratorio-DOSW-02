@@ -6,6 +6,21 @@ import java.util.List;
 
 public class CarreraParalela {
 
+<<<<<<< Updated upstream
+=======
+    public void integralSolution(List<Integer> listToProccess){
+        System.out.println(findMax(listToProccess));
+        System.out.println(calculateMinimum(listToProccess));
+        System.out.println(listToProccess.stream().count());
+        System.out.println(itsDivisor(findMax(listToProccess)));
+        System.out.println(isTheListLongEven(listToProccess));
+    }
+
+    public int findMax(List<Integer> listOfIntegers ){
+        return listOfIntegers.stream().max(Integer::compare).get();
+    }
+
+>>>>>>> Stashed changes
     public static Integer calculateMinimum(List<Integer> listOfNumbers){
         return listOfNumbers.stream().min(Integer::compare).get();
     }
