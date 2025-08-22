@@ -89,6 +89,10 @@ El ejercicio nos permitió practicar:
 - evidencia merges
 ![Captura](imagenes/captura32.png)
 
+- codigo
+![Captura](imagenes/captura35.png)
+![Captura](imagenes/captura36.png)
+
 
 ## Reto 6 — La máquina de decisiones
 
@@ -118,5 +122,73 @@ El ejercicio nos permitió practicar:
 
 - evidencia merges (conflicto/resolución en `registrarAcciones(...)`)  
 ![Captura](imagenes/captura34.png)
+
+- codigo
+![Captura](imagenes/captura38.png)
+![Captura](imagenes/captura39.png)
+![Captura](imagenes/captura40.png)
+
+## Cuestionario (Respuestas)
+
+7. **¿Qué ventajas tiene `Collectors.toMap()` frente a un bucle tradicional para llenar un mapa?**  
+   - Más **declarativo y conciso** que `for` + `put`.  
+   - Permite definir **estrategia de fusión** ante claves duplicadas:  
+     ```java
+     .collect(Collectors.toMap(kv -> kv.key(), kv -> kv.value(), (v1, v2) -> v1))
+     ```
+   - Permite elegir la **implementación** del mapa (p. ej., `TreeMap`):  
+     ```java
+     .collect(Collectors.toMap(KV::key, KV::value, (v1,v2)->v1, TreeMap::new))
+     ```
+   - Se integra con **pipelines** de streams (map/filter/sorted) y soporta **paralelismo**.
+
+8. **Si usas `List` con objetos y luego aplicas `stream().map()`, ¿qué tipo de operación estás haciendo?**  
+   - Es una **operación intermedia de transformación (uno a uno)**.  
+   - Toma cada elemento y lo **mapea** a otro (posible **cambio de tipo**).  
+   - Retorna un **`Stream<R>`** (se ejecuta al usar una operación terminal).  
+     ```java
+     List<String> nombres = estudiantes.stream()
+         .map(Student::getName) 
+         .collect(Collectors.toList());
+     ```
+
+9. **¿Qué hace `stream().filter()` y qué retorna?**  
+   - Aplica un **predicado** y **retiene** solo los elementos que lo cumplen.  
+   - Es **intermedia** y retorna **`Stream<T>`** (perezosa; requiere operación terminal).  
+     ```java
+     List<Student> mayores = estudiantes.stream()
+         .filter(s -> s.getAge() >= 18)
+         .collect(Collectors.toList());
+
+10. **Secuencia de pasos para crear una rama desde `develop` (nueva funcionalidad)**
+
+    - Cambiar a `develop` y actualizar
+    - Crear y cambiar a la rama de feature
+    - Trabajar y confirmar cambios
+   -  Publicar la rama y fijar upstream
+
+
+11. **¿Cuál es la diferencia entre crear una rama con `git branch` y con `git checkout -b`?**  
+    - `git branch nombre`: **crea** la rama, pero **no** te mueve a ella.  
+      ```bash
+      git branch feature/nueva-funcionalidad
+      git switch feature/nueva-funcionalidad   
+    - `git checkout -b nombre`: **crea y cambia** a la rama en un solo paso.  
+      ```bash
+      git checkout -b feature/nueva-funcionalidad
+      # equivalente moderno:
+      git switch -c feature/nueva-funcionalidad
+      ```
+
+12. **¿Por qué es recomendable crear ramas `feature/` para nuevas funcionalidades en lugar de trabajar en `main` directamente?**  
+    - **Aislamiento**: evitas romper `main` mientras desarrollas.  
+    - **Flujo limpio**: facilitas **PRs**, **code review** y **CI/CD** por funcionalidad.  
+    - **Historial claro**: commits y merges por tema; mejor trazabilidad.  
+    - **Seguridad**: poder **revertir** ó **descartar** una feature sin afectar producción.  
+    - **Colaboración**: varias features en paralelo sin bloqueos.  
+    - **Norma de equipo**: convención `feature/`, `hotfix/`, `release/` ayuda a la organización.
+
+
+
 
 
