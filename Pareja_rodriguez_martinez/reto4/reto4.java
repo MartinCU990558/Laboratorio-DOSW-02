@@ -33,4 +33,14 @@ public class Reto4 {
 
         return tabla;
     }
+
+    public static void convertKeysToUpperCase(Map<String, Integer> mapa) {
+        Map<String, Integer> copia = new HashMap<>();
+        for (Map.Entry<String, Integer> entry : mapa.entrySet()) {
+            copia.put(entry.getKey().toUpperCase(), entry.getValue());
+        }
+        mapa.clear();
+        mapa.putAll(copia);
+    }
+    
 }
