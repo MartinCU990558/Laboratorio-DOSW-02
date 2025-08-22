@@ -49,7 +49,8 @@ public class Reto5 {
         union.addAll(setA);
         union.addAll(setB);
         System.out.println("Resultado: ");
-        union.forEach(n -> System.out.print("Número en arena: "+ n + " "));
+        union.forEach(n -> System.out.print("Número en arena: "+ n + " " + "\n"));
     }
 }
+
 
