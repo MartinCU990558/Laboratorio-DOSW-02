@@ -114,3 +114,26 @@
 ---
 
 ## Cuestionario
+1. **Cúal es la diferencia entre git merge y git rebase**
+
+   La diferencia del merge y el rebase es que el merge toma lo que hay en otra Branch junto a todo el historial de commits de esa branch y lo une con lo que está en la Branch actual mientras que rebase es tomar lo que hay en otra rama y aplicarla a la actual, pero este lo que hace es reaplicar los commits de una rama sobre otra y así creando un historial lineal
+
+2. **Si dos ramas modifican la misma línea de un archivo ¿Qué sucede al hacer merge?**
+
+   Cuando dos ramas modifican la misma línea de un archivo se crea un conflicto entre las dos ramas por lo que cuando se realiza el merge toda realizar una adecuación del código ya sea reordenando las dos ramas o eligiendo una de las dos implementaciones que generan conflicto y obviando la otra.
+
+3. **¿Cómo puedes ver gráficamente el historial de merges y ramas en consola?**
+
+   Puedes visualizar gráficamente el historial de commits, merges y ramas en la consola usando el comando git log con diferentes opciones como:  git log --oneline --graph –all o git log --oneline --graph --all --decorate
+
+4. **Explica la diferencia entre un commit y un push?**
+
+   Realizar un commit es declarar un cambio dentro del repositorio local, pero al realizar el push este actualiza también con los mismos cambios el repositorio remoto
+
+5. **Para que sirve git stash y git pop?**
+
+   El git stash sirve para guardar temporalmente cambios que no se les han realizado commits para poder realizar cambios sin perder lo trabajado previamente, por otra parte, el git pop sirve para recuperar los cambios guardados mas recientemente en el stash y aplicarlos en el directorio actual.
+
+6. **¿Qué diferencia hay entre HashMap y HashTable?**
+
+   La diferencia principal entre HashMasp y HashTable es que HashMap es más rápido, pero no es muy optimo en multi hilo mientras que el HashTable es más lento, pero todos sus métodos están sincronizados por lo que es seguro de usar para entornos multi hilo.
