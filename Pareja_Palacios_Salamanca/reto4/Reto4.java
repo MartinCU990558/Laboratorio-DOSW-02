@@ -43,6 +43,7 @@ public class Reto4 {
         for (String key : mapa.keySet()) {
             if (!resultado.containsKey(key)){
                 resultado.put(key, mapa.get(key));
+
             }
         }
         resultado.entrySet().stream()
