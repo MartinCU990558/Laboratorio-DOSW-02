@@ -74,8 +74,6 @@ public class reto_4 {
         Map<String, Integer> hashMap = storeUniqueKeysMap(input1);
         Hashtable<String, Integer> hashTable = storeUniqueKeysTable(input2);
 
-        Map<String, Integer> finalResult = combineAndTransform(hashMap, hashTable);
-        System.out.println(finalResult);
         System.out.println( finalFeature(input1, input2));
     }
 }

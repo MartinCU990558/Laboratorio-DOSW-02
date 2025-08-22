@@ -22,7 +22,6 @@ public class reto_5 {
 
     }
 
-
     public static void main(String[] args) {
         List<Integer> listHashSet = List.of(4, 9, 15, 7, 18, 21, 10, 5);
         List<Integer> listTreeSet = List.of(12, 3, 25, 10, 7, 30, 18, 4);
