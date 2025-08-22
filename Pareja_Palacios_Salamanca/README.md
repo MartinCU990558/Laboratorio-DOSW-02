@@ -13,31 +13,62 @@
 **Evidencia:**
 - Configuración Correo Eletrónico en Repositorio Local:
     
-    ![alt text](img/1.png)
+    ![Evidencia Paso Correspondiente](img/1.png)
 
 - Clonar el Repositorio
 
-    ![alt text](img/2.png)
+    ![Evidencia Paso Correspondiente](img/2.png)
 
 - Creacion de Rama de Principal
 
-    ![alt text](img/3.png)
+    ![Evidencia Paso Correspondiente](img/3.png)
 
 - Push
 
-    ![alt text](img/4.png)
+    ![Evidencia Paso Correspondiente](img/4.png)
 
 - Validación de la Estructura Creada
 
-    ![alt text](img/5.png)
+    ![Evidencia Paso Correspondiente](img/5.png)
 
 ## Reto 1
 **Evidencia:**
 
-- CODIGO RETO 1
+- Codigo Reto 1
 
-    ![alt text](img/Codigo1.png)
+    ![Evidencia Paso Correspondiente](img/Codigo1.png)
 
-- RESULTADO RETO 1
+- Resultado Reto 1
 
-    ![alt text](img/Resp1.png)
+    ![Evidencia Paso Correspondiente](img/Resp1.png)
+
+## Reto 2
+**Evidencia**
+
+### Primer Choque
+
+- Implementaciones iniciales para las ramas de cada estudiante
+
+    ![Evidencia Paso Correspondiente](img/6.png)
+
+- Conflicto generado al momento de hacer merge
+
+    ![Evidencia Paso Correspondiente](img/7.png)
+
+- Configuración de archivo resultante en el merge que genero conflictos para el primer choque
+
+    ![Evidencia Paso Correspondiente](img/8.png)
+
+### Segundo Choque
+
+- Implementaciones iniciales para las ramas de cada estudiante
+    
+    ![Evidencia Paso Correspondiente](img/9.png)
+
+- Conflicto generado al momento de hacer merge
+
+  ![Evidencia Paso Correspondiente](img/10.png)
+
+- Resultado implementación
+
+  ![Evidencia Paso Correspondiente](img/11.png)
