@@ -74,15 +74,15 @@ Descripción breve de lo que hicieron.
 
 ## Preguntas Teóricas
 
-** Pregunta 8. Si usas List con objetos y luego aplicas stream().map() que tipo de operación estas haciendo? **
+**Pregunta 8. Si usas List con objetos y luego aplicas stream().map() que tipo de operación estas haciendo?**
 
 Una operación de transformación. Convierte cada elemento del stream en otro valor (puede ser del mismo tipo o distinto). Retorna un nuevo Stream con los elementos transformados.
 
-** Pregunta 9. Que hace el método stream().filter() y que retorna?** 
+**Pregunta 9. Que hace el método stream().filter() y que retorna?** 
 
 Aplica un predicado booleano a cada elemento. Mantiene solo los que cumplen la condición. Retorna un Stream con esos elementos filtrados.
 
-** Pregunta 10. Describe el paso a paso de cómo crear una rama desde develop si es una funcionalidad nueva. **
+**Pregunta 10. Describe el paso a paso de cómo crear una rama desde develop si es una funcionalidad nueva.**
 
 1. Guardamos o limpiamos el trabajo actual.
 	git status
@@ -98,13 +98,13 @@ Aplica un predicado booleano a cada elemento. Mantiene solo los que cumplen la c
 	git push -u origin feature/<nombre-corto>
 
 
-** Pregunta 11. ¿Cuál es la diferencia entre crear una rama con git branch y con git checkout -b? **
+**Pregunta 11. ¿Cuál es la diferencia entre crear una rama con git branch y con git checkout -b?**
 
 git branch <rama>: solo crea la rama. Te quedas en la rama actual.
 
 git checkout -b <rama>: crea y cambia a la nueva rama en un solo paso.
 
-** Pregunta 12. ¿Por qué es recomendable crear ramas feature/ para nuevas funcionalidades en lugar de trabajar en main directamente? **
+**Pregunta 12. ¿Por qué es recomendable crear ramas feature/ para nuevas funcionalidades en lugar de trabajar en main directamente?**
 
 -Aislamiento: los cambios no rompen el código estable.
 
