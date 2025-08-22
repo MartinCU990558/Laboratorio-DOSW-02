@@ -61,4 +61,34 @@ Código: se creó la clase estudiante y la clase mensaje. La clase estudiante ti
 - evidencia merges
 ![Captura](imagenes/captura32.png)
 
-// 
+
+## Reto 6 — La máquina de decisiones
+
+### Objetivo
+- Implementar una **máquina de comandos** que use `switch-case` y un `Map<String, Runnable>` para mapear **comandos** → **acciones** con **lambdas**.
+- Registrar **8 comandos** divididos por estudiante y luego **unificarlos**:
+  - **A:** `SALUDAR`, `DESPEDIR`, `CANTAR`, `DANZAR`
+  - **B:** `BROMEAR`, `GRITAR`, `SUSURRAR`, `ANALIZAR`
+- Demostrar el funcionamiento llamando los comandos (ejemplo del enunciado).
+
+### Flujo de ramas
+- **Rama del reto:** `feature/reto_6_CorreaElizabeth_ContrerasJuan_2025-2`
+- **Subrama A:** `feature/reto6_A_CorreaElizabeth_ContrerasJuan_2025-2`
+- **Subrama B:** `feature/reto6_B_CorreaElizabeth_ContrerasJuan_2025-2`
+
+### Lo que hicimos
+- **Registro A (lambdas)**: en `registrarAcciones(...)`, se agregaron acciones para `SALUDAR`, `DESPEDIR`, `CANTAR`, `DANZAR`.
+- **Registro B (lambdas)**: en **el mismo método y misma firma** (`registrarAcciones(...)`) se agregaron acciones para `BROMEAR`, `GRITAR`, `SUSURRAR`, `ANALIZAR` → **conflicto planificado** al merge.
+- **Unificación**: se resolvió el conflicto dejando **una sola función** `registrarAcciones()` con los **8 comandos**.
+- **Dispatcher**: `ejecutarComando(String)` usa `switch-case` (8 casos) y ejecuta `acciones.get(cmd).run()` si el comando está registrado; si no, informa.
+
+
+
+**Evidencia:**
+![Captura](imagenes/captura.png)
+
+- salida de código 
+![Captura](imagenes/captura33.png)
+
+- evidencia merges (conflicto/resolución en `registrarAcciones(...)`)  
+![Captura](imagenes/captura42.png)
