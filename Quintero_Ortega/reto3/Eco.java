@@ -15,23 +15,16 @@ public class Eco {
                         StringBuilder::toString
                 ));
     }
-
     public static String invertirBuffer(String msg) {
         return new StringBuffer(msg).reverse().toString();
     }
-
     public static String ecoMisterioso(String msg) {
-        StringBuffer sb = new StringBuffer();
-        IntStream.range(0, 3).forEach(i -> {
-            if (i > 0) sb.append(" ");
-            sb.append(msg);
-        });
-        return sb.reverse().toString();
+        String repetido = repetirBuilder(msg);
+        return new StringBuffer(repetido).reverse().toString();
     }
-    
     public static void invocarConLambda() {
         Function<String, String> fn = m -> ecoMisterioso(m);
-        System.out.println(fn.apply("hola"));
+        System.out.println(fn.apply("Hola"));
     }
 }
 
