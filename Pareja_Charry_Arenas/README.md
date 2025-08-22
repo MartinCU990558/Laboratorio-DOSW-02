@@ -19,6 +19,7 @@ En este reto se creó un programa en Java que genera mensajes de bienvenida para
 ### Reto 2 Carrera en paralelo
 **Evidencia:**
 ![captura](imagenes/reto2.png)
+![captura](imagenes/reto2_evidencia.png)
 El programa calcula para cada lista: el máximo, el mínimo, la cantidad de elementos, si el máximo es múltiplo o divisor de 2, y si la cantidad de elementos es par o impar. Los resultados se almacenan en la clase Resultados y se muestran en consola mediante el main de la clase Reto2. Esto se hizo poco a poco, creando una rama por estudiante, donde cada uno hacia una funcion, luego al mergearlas se solucionaban conflictos, haciendo un codigo que implemente ambos.
 
 ### Reto 3 El eco misterioso
