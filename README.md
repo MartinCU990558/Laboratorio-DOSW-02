@@ -86,7 +86,47 @@ El objetivo fue **practicar la colaboración en paralelo, resolución de conflic
      - Si el mayor es múltiplo/divisor de 2  
      - Si la cantidad es par o impar  
 
-9. Se hizo commit final y merge de las ramas carril a `feature/reto_2__CorreaElizabeth_ContrerasJuan_2025-2`.  
+9. Se hizo commit final y merge de las ramas carril a `feature/reto_2__CorreaElizabeth_ContrerasJuan_2025-2`.
+
+## ⚙️ Solución Implementada  
+
+package reto2;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class CarreraParalela {
+    public static void main(String[] args) {}
+
+    public static int getMax(List<Integer> l) {
+        return (l.stream().max(Integer::compare).get());
+    }
+
+    private static int amount(List<Integer> l){return (int) l.stream().count();}
+
+}
+
+public static List<Integer> getMinAndAmount(List<Integer> l) {
+    int min = l.stream().min(Integer::compare).get();
+    int count = amount(l);
+    return Arrays.asList(min, count);
+}
+
+public void crash(List<Integer> l) {
+    new Result(getMax(l), getMinAndAmount(l).get(0),getMinAndAmount(l).get(1));
+}
+
+class Result {
+    private int max;
+    private int min;
+    private int count;
+
+    public Result(int max, int min, int count) {
+        this.max = max;
+        this.min = min;
+        this.count = count;
+    }
+}
 
 ## Reto 3 -- El eco misterioso
 
