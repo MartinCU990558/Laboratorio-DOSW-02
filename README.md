@@ -27,17 +27,17 @@ Realizamos un commit colaborativo en la misma rama, verificando el log para aseg
 
 ---
 
-### Reto 3: (nombre del reto)
+### Reto 3: (El eco misterioso)
 **Evidencia:**  
 ![Captura](./Quintero_Ortega/imagenes/reto3.png)  
-Descripción breve de lo que hicieron.  
+El reto consistía en implementar un método usando StringBuilder y StringBuffer para construir mensajes con ecos. 
 
 ---
 
-### Reto 4: (nombre del reto)
+### Reto 4: (El tesoro de las llaves duplicadas)
 **Evidencia:**  
 ![Captura](./Quintero_Ortega/imagenes/reto4.png)  
-Descripción breve de lo que hicieron.  
+Había que guardar pares clave-valor en un HashMap (rápido pero sin protección) y en un Hashtable (más lento pero seguro). Luego, juntar ambos mapas en uno solo, dando prioridad al Hashtable en caso de conflicto.
 
 ---
 
