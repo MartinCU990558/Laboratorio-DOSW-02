@@ -10,7 +10,7 @@ public class Reto4 {
     public static void main(String[] args) {
         HashMap<String, Integer> mapa = createHashMap();
 
-        Hashtable<String, Integer> table = createHashTable()
+        Hashtable<String, Integer> table = createHashTable();
 
         unificar(table, mapa);
     }
@@ -22,13 +22,14 @@ public class Reto4 {
         mapa.putIfAbsent("diamante", 10);
         return mapa;
     }
-    public static Hashtable<String, Integer> createHashTable(){
-        Hashtable<String, Integer> table = new Hashtable<>()
+
+    public static Hashtable<String, Integer> createHashTable() {
+        Hashtable<String, Integer> table = new Hashtable<>();
         table.put("plata", 8);
         table.put("rubí", 4);
         table.put("oro", 12);
         table.put("esmeralda", 6);
-        return table ;
+        return table;
     }
 
     public static void unificar(Hashtable<String, Integer> table, HashMap<String, Integer> mapa){
