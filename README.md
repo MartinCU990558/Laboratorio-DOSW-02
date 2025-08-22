@@ -39,7 +39,15 @@ Output obtenido tras correr el programa
 ![Captura](imagenes/captura2.png)
 Código: se creó la clase estudiante y la clase mensaje. La clase estudiante tiene los atributos de nombre, edad, correo y semestre. Se hicieron métodos get de cada atributo. La clase mensaje utiliza el stream, map y collect.
 
+## Reto 3 -- El eco misterioso
 
+En este reto trabajamos en equipo para simular el extraño comportamiento de una cueva que devuelve un eco “especial” según cómo se le hable.
+
+El ejercicio nos permitió practicar:
+ - Uso de StringBuilder y StringBuffer.
+ - Creación de ramas feature y subramas.
+ - Resolución de conflictos en un merge.
+ - Uso de lambdas y stream() en Java.
 ---
 
 ## Reto 4 — El tesoro de las Llaves duplicadas
