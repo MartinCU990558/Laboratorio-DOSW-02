@@ -21,17 +21,19 @@ la redaccion solicitada por el problea. Conviertiendo los objetos de la lista es
 extraer de manera relativamente eficiente los atributos especificos.
 
 ### Reto 2: Commit colaborativo
+![img_3 (2).png](img_3%20%282%29.png)
 En este reto nos dismos a la intervencion rigurosa de cada una de las reglas para hacer su desarrollo
 lo mas claro,consiso y limpio al momento de detallar tanto visual como logicamente el codigo presentado 
 el cual atravez de clases y metodos se desarrollo el ejercicio del punto 2 de manera correcta, se evidencian
 en los pantallasos los procesos para llegar a su etapa final.
-
+![img_1 (2).png](img_1%20%282%29.png)
 En la siguiente se puede apreciar como se evidencian los choques propuestos en el ejercicio 
-
+![img_2 (2).png](img_2%20%282%29.png)
 Después de las rigurosas pruevas y creacion de una nueva clase solicitada para el resultado final asi se 
 aprecia su trabajo en totalidad de los requerimientos solicitados
 Con el fin de dar solucion a cada una de las incopnitas propuestas en este reto la ultima pregunta es alucion
 a usar el comando "git log --oneline"
+![img_4 (2).png](img_4%20%282%29.png)
 
 ### Reto 6: La maquina de desiciones
 ** Evidencia :**
