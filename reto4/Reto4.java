@@ -44,10 +44,27 @@ public class Reto4 {
         return merged;
     }
 
-    public static void imprimirClavesMayusculas(Map<String, Integer> mapa) {
-        mapa.entrySet().stream()
-            .map(e -> Map.entry(e.getKey().toUpperCase(), e.getValue()))
-            .sorted(Map.Entry.comparingByKey())
-            .forEach(e -> System.out.println("Clave: " + e.getKey() + " | Valor: " + e.getValue()));
+    public static Map<String, Integer> combinarMayusculasYOrdenarImprimiendo(HashMap<String, Integer> mapaRapido, Hashtable<String, Integer> mapaBlindado) {
+
+        Map<String, Integer> combinado = combinarMapas(mapaRapido, mapaBlindado);
+
+        Set<Map.Entry<String, Integer>> entradas = combinado.entrySet();
+
+        Stream<Map.Entry<String, Integer>> streamEntradas = entradas.stream();
+
+        Stream<Map.Entry<String, Integer>> streamMayusculas = streamEntradas.map(e -> Map.entry(e.getKey().toUpperCase(), e.getValue()));
+
+        Map<String, Integer> mayusOrdenado = streamMayusculas.collect(
+                Collectors.toMap(
+                        e -> e.getKey(),
+                        e -> e.getValue(),
+                        (v1, v2) -> v1,
+                        TreeMap::new
+                )
+        );
+
+        mayusOrdenado.forEach((k, v) -> System.out.println("Clave: " + k + " | Valor: " + v));
+        return mayusOrdenado;
     }
+
 }
