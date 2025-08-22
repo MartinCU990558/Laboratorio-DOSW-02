@@ -11,3 +11,10 @@
 ## Retos completados
 
 ###  Reto 1: Configuración y creacion de rama
+
+### RETO #2: Carrera en Paralelo
+**Evidencia**
+![img_1.png](img_1.png)
+Cada integrante realizó las funciones respectivas a su carril (ramas hijas) para luego combinarlas en la raiz 
+principal, ocurrieron los choques esperados a los cuales dimos solución, con esto unificamos la 
+estructura de la rama para que fuera una.
