@@ -89,7 +89,7 @@ El objetivo fue **practicar la colaboración en paralelo, resolución de conflic
 9. Se hizo commit final y merge de las ramas carril a `feature/reto_2__CorreaElizabeth_ContrerasJuan_2025-2`.
 
 ## ⚙️ Solución Implementada  
-
+```java
 package reto2;
 
 import java.util.Arrays;
@@ -127,7 +127,7 @@ class Result {
         this.count = count;
     }
 }
-
+```
 ## Reto 3 -- El eco misterioso
 
 En este reto trabajamos en equipo para simular el extraño comportamiento de una cueva que devuelve un eco “especial” según cómo se le hable.
