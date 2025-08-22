@@ -342,6 +342,39 @@ public class Reto5 {
 
 ## Cuestionario (Respuestas)
 
+## 1. ¿Cuál es la diferencia entre `git merge` y `git rebase`?
+
+- **git merge**:  
+  Combina los cambios de otra rama con la rama actual creando un *commit de merge*.  
+  - Mantiene el historial completo de ambas ramas.  
+  - Puede resultar en un historial con bifurcaciones (*merge commits*).  
+  - Es más seguro porque conserva el contexto original de cada cambio.
+
+- **git rebase**:  
+  Toma los cambios de una rama y los aplica sobre otra como si hubieran sido hechos en secuencia.  
+  - Reescribe la historia del proyecto.  
+  - Elimina los *merge commits* y genera un historial lineal.  
+  - Útil para mantener un historial limpio, pero debe usarse con cuidado, sobre todo si la rama ya fue compartida.
+
+---
+
+## 2. Si dos ramas modifican la misma línea de un archivo, ¿qué sucede al hacer merge?
+
+Cuando dos ramas editan la **misma línea** en un archivo, Git no puede decidir cuál cambio conservar.  
+Esto genera un **conflicto de merge**.  
+
+- El conflicto debe resolverse manualmente editando el archivo.  
+- Git marcará las partes en conflicto con `<<<<<<<`, `=======` y `>>>>>>>`.  
+
+#3: Ver el historial de merges y ramas en consola
+
+Para visualizar de forma gráfica el historial de **commits, merges y ramas** directamente desde la consola, se puede usar el comando:
+
+```bash
+git log --oneline --graph --all --decorate
+```
+  
+
 7. **¿Qué ventajas tiene `Collectors.toMap()` frente a un bucle tradicional para llenar un mapa?**  
    - Más **declarativo y conciso** que `for` + `put`.  
    - Permite definir **estrategia de fusión** ante claves duplicadas:  
