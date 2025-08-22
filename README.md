@@ -373,7 +373,6 @@ Para visualizar de forma gráfica el historial de **commits, merges y ramas** di
 ```bash
 git log --oneline --graph --all --decorate
 ```
-# 📘 Respuestas sobre Git y Java
 
 ## 4. Explica la diferencia entre un **commit** y un **push**
 Un **commit** guarda los cambios en el repositorio **local**, es decir, en tu computadora.  
