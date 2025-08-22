@@ -319,6 +319,12 @@ public class Reto5 {
 
 ```
 
+**Evidencia:**
+Al correr el programa llamando a la función crash, se crean los sets con los números aleatorios y el resultado final es:
+
+
+![Captura](imagenes/captura52.png)
+
 ## Reto 6 — La máquina de decisiones
 
 ### Objetivo
