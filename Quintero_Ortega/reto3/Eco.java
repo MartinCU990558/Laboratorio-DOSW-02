@@ -21,8 +21,12 @@ public class Eco {
     }
 
     public static String ecoMisterioso(String msg) {
-
-        return msg;
+        StringBuffer sb = new StringBuffer();
+        IntStream.range(0, 3).forEach(i -> {
+            if (i > 0) sb.append(" ");
+            sb.append(msg);
+        });
+        return sb.reverse().toString();
     }
     
     public static void invocarConLambda() {
