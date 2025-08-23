@@ -32,10 +32,22 @@ public class Reto6 {
     }
 
     public static void configurarComandos() {
+        comandos.put("SALUDAR", () ->
+                System.out.println("La máquina dice: ¡Saludos, viajero del tiempo y del código!"));
+        comandos.put("DESPEDIR", () ->
+                System.out.println("La máquina dice: Que los bits te acompañen, hasta la próxima misión."));
+        comandos.put("CANTAR", () ->
+                System.out.println("La máquina canta: 01010101"));
+        comandos.put("DANZAR", () ->
+                System.out.println("La máquina gira y emite chispas: Girando en modo fiesta."));
     }
 
     public static void ejecutarComando(String comando) {
         switch (comando) {
+            case "SALUDAR":
+            case "DESPEDIR":
+            case "CANTAR":
+            case "DANZAR":
                 comandos.get(comando).run();
                 break;
         }
