@@ -48,6 +48,10 @@ public class Reto5{
     }
 
     public static Set<Integer> unirConjuntos(Set<Integer> conjuntoA, Set<Integer> conjuntoB) {
+        Set<Integer> union = new TreeSet<>();
+        union.addAll(conjuntoA);
+        union.addAll(conjuntoB);
+        return union;
     }
 
     public static void mostrarResultado(Set<Integer> conjunto) {
