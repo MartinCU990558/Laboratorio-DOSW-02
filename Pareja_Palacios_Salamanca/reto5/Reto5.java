@@ -1,3 +1,7 @@
+import java.util.*;
+import java.util.stream.*;
+import java.util.regex.*;
+
 public class Reto5{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -32,6 +36,9 @@ public class Reto5{
     }
 
     public static Set<Integer> procesarHashSet(Set<Integer> conjunto) {
+        return conjunto.stream()
+                .filter(num -> num % 3 != 0)
+                .collect(Collectors.toSet());
     }
 
     public static Set<Integer> procesarTreeSet(Set<Integer> conjunto) {
