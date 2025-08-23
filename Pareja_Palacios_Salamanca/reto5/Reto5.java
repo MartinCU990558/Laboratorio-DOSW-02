@@ -1,3 +1,7 @@
+import java.util.*;
+import java.util.stream.*;
+import java.util.regex.*;
+
 public class Reto5{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
