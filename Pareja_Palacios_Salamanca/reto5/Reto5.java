@@ -39,8 +39,11 @@ public class Reto5{
     }
 
     public static Set<Integer> procesarTreeSet(Set<Integer> conjunto) {
-
+        return conjunto.stream()
+                .filter(num -> num % 5 != 0)
+                .collect(Collectors.toCollection(TreeSet::new));
     }
+
     public static Set<Integer> unirConjuntos(Set<Integer> conjuntoA, Set<Integer> conjuntoB) {
     }
 
