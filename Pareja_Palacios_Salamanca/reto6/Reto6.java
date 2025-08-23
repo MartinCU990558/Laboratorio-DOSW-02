@@ -2,6 +2,7 @@ import java.util.*;
 import java.util.regex.*;
 
 public class Reto6 {
+
     private static Map<String, Runnable> comandos = new HashMap<>();
 
     public static void main(String[] args) {
