@@ -32,6 +32,7 @@ public class Reto6 {
     }
 
     public static void configurarComandos() {
+
         comandos.put("SALUDAR", () ->
                 System.out.println("La máquina dice: ¡Saludos, viajero del tiempo y del código!"));
         comandos.put("DESPEDIR", () ->
