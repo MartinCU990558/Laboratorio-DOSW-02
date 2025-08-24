@@ -113,6 +113,42 @@
 
 ---
 
+## Reto 5
+**Evidencia:**
+
+- Implementación estudiante A en su rama correspondiente
+
+  ![Evidencia Paso Correspondiente](img/21.png)
+
+
+- Implementación estudiante B en su rama correspondiente
+
+  ![Evidencia Paso Correspondiente](img/22.png)
+
+- Ejecución desde rama main del reto
+
+  ![Evidencia Paso Correspondiente](img/23.png)
+
+---
+
+## Reto 6
+**Evidencia:**
+
+- Implementación estudiante A en su rama correspondiente
+
+  ![Evidencia Paso Correspondiente](img/24.png)
+
+
+- Implementación estudiante B en su rama correspondiente
+
+  ![Evidencia Paso Correspondiente](img/25.png)
+
+- Ejecución desde rama main del reto
+
+  ![Evidencia Paso Correspondiente](img/26.png)
+
+---
+
 ## Cuestionario
 1. **Cúal es la diferencia entre git merge y git rebase**
 
